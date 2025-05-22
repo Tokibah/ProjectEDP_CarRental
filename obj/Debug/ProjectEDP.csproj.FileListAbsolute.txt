@@ -1,0 +1,13 @@
+C:\Users\Ashwin\source\repos\ProjectEDP\bin\Debug\ProjectEDP.exe.config
+C:\Users\Ashwin\source\repos\ProjectEDP\bin\Debug\ProjectEDP.exe
+C:\Users\Ashwin\source\repos\ProjectEDP\bin\Debug\ProjectEDP.pdb
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.csproj.AssemblyReference.cache
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.Properties.Resources.resources
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.UserType.resources
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.csproj.GenerateResource.cache
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.csproj.CoreCompileInputs.cache
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.exe
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.pdb
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.exe.config
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.AdminLogin.resources
+C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.LoginCustomer.resources
