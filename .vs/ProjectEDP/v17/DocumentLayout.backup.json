@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\ashwin\\source\\repos\\projectedp\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\ashwin\\source\\repos\\projectedp\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\ashwin\\source\\repos\\projectedp\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\ashwin\\source\\repos\\projectedp\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\ashwin\\source\\repos\\projectedp\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,33 +30,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserType.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\UserType.cs",
               "RelativeDocumentMoniker": "UserType.cs",
-              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\UserType.cs [Design]*",
-              "RelativeToolTip": "UserType.cs [Design]*",
+              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\UserType.cs [Design]",
+              "RelativeToolTip": "UserType.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T11:16:31.263Z"
+              "WhenOpened": "2025-05-21T11:16:31.263Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LoginCustomer.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\LoginCustomer.cs",
               "RelativeDocumentMoniker": "LoginCustomer.cs",
-              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\LoginCustomer.cs [Design]*",
-              "RelativeToolTip": "LoginCustomer.cs [Design]*",
+              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\LoginCustomer.cs [Design]",
+              "RelativeToolTip": "LoginCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T11:56:33.063Z"
+              "WhenOpened": "2025-05-21T11:56:33.063Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AdminLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\AdminLogin.cs",
               "RelativeDocumentMoniker": "AdminLogin.cs",
@@ -56,6 +66,30 @@
               "RelativeToolTip": "AdminLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T14:24:43.11Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerBooking.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\CustomerBooking.cs",
+              "RelativeDocumentMoniker": "CustomerBooking.cs",
+              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\CustomerBooking.cs [Design]",
+              "RelativeToolTip": "CustomerBooking.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:56:45.693Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "AdminDashboard.cs",
+              "ToolTip": "C:\\Users\\Ashwin\\source\\repos\\ProjectEDP\\AdminDashboard.cs [Design]",
+              "RelativeToolTip": "AdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T16:04:56.777Z",
               "EditorCaption": " [Design]"
             }
           ]
