@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectEDP
@@ -15,6 +8,33 @@ namespace ProjectEDP
         public LoginCustomer()
         {
             InitializeComponent();
+        }
+
+        private void PasswordTxtBoxCust_TextChanged(object sender, EventArgs e)
+        {
+            // Optional: Live validation or input masking
+        }
+
+        private void SubmitBtnLoginCust_Click(object sender, EventArgs e)
+        {
+            string username = UsernameTxtBoxCust.Text.Trim();
+            string password = PasswordTxtBoxCust.Text.Trim();
+
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Please enter your username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter your password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Pass the data to CustomerBooking
+                CustomerBooking c_booking = new CustomerBooking(username, password);
+                c_booking.Show();
+                this.Hide();
+            }
         }
     }
 }

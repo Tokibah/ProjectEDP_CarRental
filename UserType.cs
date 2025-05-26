@@ -25,11 +25,18 @@ namespace ProjectEDP
         private void Admin_Click(object sender, EventArgs e)
         {
 
+            AdminLogin admin_login = new AdminLogin();
+            admin_login.Show();
+
+            this.Hide();
         }
 
         private void Customer_Click(object sender, EventArgs e)
         {
+            LoginCustomer login_cust = new LoginCustomer();
+            login_cust.Show();
 
+            this.Hide();
         }
 
         private void Form1Title_Click(object sender, EventArgs e)
