@@ -16,5 +16,20 @@ namespace ProjectEDP
         {
             InitializeComponent();
         }
+
+        private void bookingBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bookingBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.primeWheelDataSet);
+
+        }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'primeWheelDataSet.Booking' table. You can move, or remove it, as needed.
+            this.bookingTableAdapter.Fill(this.primeWheelDataSet.Booking);
+
+        }
     }
 }
