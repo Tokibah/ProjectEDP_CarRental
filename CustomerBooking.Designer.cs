@@ -43,10 +43,10 @@
             this.ReturnLocationLabel = new System.Windows.Forms.Label();
             this.ReturnLocationComboBox = new System.Windows.Forms.ComboBox();
             this.PaymentTypeGpBoxLabel = new System.Windows.Forms.GroupBox();
-            this.CashPayment = new System.Windows.Forms.RadioButton();
-            this.QR = new System.Windows.Forms.RadioButton();
-            this.FPXBanking = new System.Windows.Forms.RadioButton();
             this.TNGWallet = new System.Windows.Forms.RadioButton();
+            this.FPXBanking = new System.Windows.Forms.RadioButton();
+            this.QR = new System.Windows.Forms.RadioButton();
+            this.CashPayment = new System.Windows.Forms.RadioButton();
             this.CarRateStatic = new System.Windows.Forms.TextBox();
             this.SubmitBtnRentBook = new System.Windows.Forms.Button();
             this.TypeOfCar = new System.Windows.Forms.PictureBox();
@@ -261,27 +261,16 @@
             this.PaymentTypeGpBoxLabel.TabStop = false;
             this.PaymentTypeGpBoxLabel.Text = "Payment Type";
             // 
-            // CashPayment
+            // TNGWallet
             // 
-            this.CashPayment.AutoSize = true;
-            this.CashPayment.Location = new System.Drawing.Point(10, 25);
-            this.CashPayment.Name = "CashPayment";
-            this.CashPayment.Size = new System.Drawing.Size(58, 24);
-            this.CashPayment.TabIndex = 0;
-            this.CashPayment.TabStop = true;
-            this.CashPayment.Text = "Cash";
-            this.CashPayment.UseVisualStyleBackColor = true;
-            // 
-            // QR
-            // 
-            this.QR.AutoSize = true;
-            this.QR.Location = new System.Drawing.Point(10, 55);
-            this.QR.Name = "QR";
-            this.QR.Size = new System.Drawing.Size(108, 24);
-            this.QR.TabIndex = 1;
-            this.QR.TabStop = true;
-            this.QR.Text = "QR Payment";
-            this.QR.UseVisualStyleBackColor = true;
+            this.TNGWallet.AutoSize = true;
+            this.TNGWallet.Location = new System.Drawing.Point(10, 115);
+            this.TNGWallet.Name = "TNGWallet";
+            this.TNGWallet.Size = new System.Drawing.Size(116, 24);
+            this.TNGWallet.TabIndex = 3;
+            this.TNGWallet.TabStop = true;
+            this.TNGWallet.Text = "TNG E-Wallet";
+            this.TNGWallet.UseVisualStyleBackColor = true;
             // 
             // FPXBanking
             // 
@@ -294,16 +283,27 @@
             this.FPXBanking.Text = "FPX Online Banking";
             this.FPXBanking.UseVisualStyleBackColor = true;
             // 
-            // TNGWallet
+            // QR
             // 
-            this.TNGWallet.AutoSize = true;
-            this.TNGWallet.Location = new System.Drawing.Point(10, 115);
-            this.TNGWallet.Name = "TNGWallet";
-            this.TNGWallet.Size = new System.Drawing.Size(116, 24);
-            this.TNGWallet.TabIndex = 3;
-            this.TNGWallet.TabStop = true;
-            this.TNGWallet.Text = "TNG E-Wallet";
-            this.TNGWallet.UseVisualStyleBackColor = true;
+            this.QR.AutoSize = true;
+            this.QR.Location = new System.Drawing.Point(10, 55);
+            this.QR.Name = "QR";
+            this.QR.Size = new System.Drawing.Size(108, 24);
+            this.QR.TabIndex = 1;
+            this.QR.TabStop = true;
+            this.QR.Text = "QR Payment";
+            this.QR.UseVisualStyleBackColor = true;
+            // 
+            // CashPayment
+            // 
+            this.CashPayment.AutoSize = true;
+            this.CashPayment.Location = new System.Drawing.Point(10, 25);
+            this.CashPayment.Name = "CashPayment";
+            this.CashPayment.Size = new System.Drawing.Size(58, 24);
+            this.CashPayment.TabIndex = 0;
+            this.CashPayment.TabStop = true;
+            this.CashPayment.Text = "Cash";
+            this.CashPayment.UseVisualStyleBackColor = true;
             // 
             // CarRateStatic
             // 
