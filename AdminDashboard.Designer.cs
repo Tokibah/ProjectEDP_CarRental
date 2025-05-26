@@ -30,17 +30,17 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DashboardLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 49);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(617, 361);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(823, 444);
             this.dataGridView1.TabIndex = 0;
             // 
             // DashboardLabel
@@ -50,39 +50,21 @@
             this.DashboardLabel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DashboardLabel.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashboardLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.DashboardLabel.Location = new System.Drawing.Point(14, 8);
+            this.DashboardLabel.Location = new System.Drawing.Point(19, 10);
+            this.DashboardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DashboardLabel.Name = "DashboardLabel";
-            this.DashboardLabel.Size = new System.Drawing.Size(208, 29);
+            this.DashboardLabel.Size = new System.Drawing.Size(262, 38);
             this.DashboardLabel.TabIndex = 50;
             this.DashboardLabel.Text = "Admin Dashboard";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(759, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "TEST";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(756, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "TESST LABEL";
-            // 
             // AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1215, 554);
             this.Controls.Add(this.DashboardLabel);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminDashboard";
             this.ShowInTaskbar = false;
             this.Text = "AdminDashboard";
@@ -96,7 +78,5 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label DashboardLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
     }
 }
