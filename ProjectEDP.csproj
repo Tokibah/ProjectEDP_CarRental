@@ -171,9 +171,6 @@
     <None Include="Resources\Hatchback.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sedan.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="PrimeWheel.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

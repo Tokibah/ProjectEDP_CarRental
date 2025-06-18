@@ -27,3 +27,4 @@ C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\bin\Debug\PrimeWheel_log.
 C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\bin\Debug\ProjectEDP.exe.config
 C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\bin\Debug\ProjectEDP.exe
 C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\bin\Debug\ProjectEDP.pdb
+C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\obj\Debug\ProjectEDP.exe.config

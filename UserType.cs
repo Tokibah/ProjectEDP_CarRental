@@ -37,5 +37,10 @@ namespace ProjectEDP
         {
 
         }
+
+        private void UserType_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
