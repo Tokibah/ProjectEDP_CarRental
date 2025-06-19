@@ -107,29 +107,24 @@ namespace ProjectEDP
                 TypeOfCar.Image = null; // Clear any previous image
                 TypeOfCar.Visible = false;
             }
+
+            System.Diagnostics.Debug.WriteLine($"Current Index: {currentCarIndex}, Car: {carList[currentCarIndex]}");
         }
 
         private void PREVIOUS_Click(object sender, EventArgs e)
         {
-            if (currentCarIndex > 0)
-            {
-                currentCarIndex--;
-                LoadCarDetails(); // Update display with previous car
-            }
+            // Wrap around to the last car if at the first car
+            if (carList.Count == 0) return;
+            currentCarIndex = (currentCarIndex - 1 + carList.Count) % carList.Count;
+            LoadCarDetails();
         }
 
         private void NEXT_Click(object sender, EventArgs e)
         {
-            // carList.Count - 1 will be 2 (for 3 items: 0, 1, 2)
-            // Logic:
-            // - If currentCarIndex is 0 (Saga): 0 < 2 is true -> currentCarIndex becomes 1 (Civic)
-            // - If currentCarIndex is 1 (Civic): 1 < 2 is true -> currentCarIndex becomes 2 (Sentra)
-            // - If currentCarIndex is 2 (Sentra): 2 < 2 is false -> stops here
-            if (currentCarIndex < carList.Count - 1)
-            {
-                currentCarIndex++;
-                LoadCarDetails(); // Update display with next car
-            }
+            // Wrap around to the first car if at the last car
+            if (carList.Count == 0) return;
+            currentCarIndex = (currentCarIndex + 1) % carList.Count;
+            LoadCarDetails();
         }
 
         private void TotalAmount_Click(object sender, EventArgs e)
@@ -234,8 +229,7 @@ namespace ProjectEDP
             return "Not selected"; // If no payment option is selected
         }
 
-        // --- Empty/Placeholder Event Handlers (if wired in designer but not used in code) ---
-        // Keep these if your form's designer.cs references them.
+        
         private void CarRateStatic_TextChanged(object sender, EventArgs e) { }
         private void TotalAmount_Click_1(object sender, EventArgs e) { /* This might be a duplicate event handler binding if TotalAmount.Click is also used */ }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
