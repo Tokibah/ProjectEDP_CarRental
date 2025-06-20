@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\luqma\\onedrive\\documents\\projectedp_carrental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\user\\source\\repos\\projectedp_carrental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\customerbooking.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\primewheeldataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:primewheeldataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CustomerBooking.cs",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\CustomerBooking.cs",
               "RelativeDocumentMoniker": "CustomerBooking.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs*",
-              "RelativeToolTip": "CustomerBooking.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\CustomerBooking.cs",
+              "RelativeToolTip": "CustomerBooking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:51:35.651Z",
+              "WhenOpened": "2025-06-20T00:45:17.394Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerBooking.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs",
-              "RelativeDocumentMoniker": "CustomerBooking.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs [Design]",
-              "RelativeToolTip": "CustomerBooking.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T11:49:27.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerBooking.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.Designer.cs",
-              "RelativeDocumentMoniker": "CustomerBooking.Designer.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.Designer.cs",
-              "RelativeToolTip": "CustomerBooking.Designer.cs",
-              "ViewState": "AgIAAG4BAAAAAAAAAAAuwKEBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T06:40:39.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PrimeWheelDataSet.xsd",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\PrimeWheelDataSet.xsd",
-              "RelativeDocumentMoniker": "PrimeWheelDataSet.xsd",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\PrimeWheelDataSet.xsd",
-              "RelativeToolTip": "PrimeWheelDataSet.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-05-26T07:29:06.245Z"
             }
           ]
         }
