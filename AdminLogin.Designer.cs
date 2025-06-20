@@ -65,6 +65,7 @@
             this.SubmitBtnLoginAdmin.TabIndex = 27;
             this.SubmitBtnLoginAdmin.Text = "Submit";
             this.SubmitBtnLoginAdmin.UseVisualStyleBackColor = false;
+            this.SubmitBtnLoginAdmin.Click += new System.EventHandler(this.SubmitBtnLoginAdmin_Click);
             // 
             // PasswordTxtBoxAdmin
             // 
@@ -73,6 +74,7 @@
             this.PasswordTxtBoxAdmin.Name = "PasswordTxtBoxAdmin";
             this.PasswordTxtBoxAdmin.Size = new System.Drawing.Size(193, 27);
             this.PasswordTxtBoxAdmin.TabIndex = 24;
+            this.PasswordTxtBoxAdmin.TextChanged += new System.EventHandler(this.PasswordTxtBoxAdmin_TextChanged);
             // 
             // LogInPasswordAdminLabel
             // 
@@ -92,6 +94,7 @@
             this.UsernameTxtBoxAdmin.Name = "UsernameTxtBoxAdmin";
             this.UsernameTxtBoxAdmin.Size = new System.Drawing.Size(193, 27);
             this.UsernameTxtBoxAdmin.TabIndex = 22;
+            this.UsernameTxtBoxAdmin.TextChanged += new System.EventHandler(this.UsernameTxtBoxAdmin_TextChanged);
             // 
             // LogInUsernameAdminLabel
             // 
@@ -149,6 +152,7 @@
             this.Controls.Add(this.CustomerLoginLogo);
             this.Name = "AdminLogin";
             this.Text = "AdminLogin";
+            this.Load += new System.EventHandler(this.AdminLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameIconAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerLoginLogo)).EndInit();
