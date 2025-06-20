@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace ProjectEDP
 {
@@ -30,11 +32,42 @@ namespace ProjectEDP
             }
             else
             {
-                // Pass the data to CustomerBooking
-                CustomerBooking c_booking = new CustomerBooking(username, password);
-                c_booking.Show();
-                this.Hide();
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        string query = "SELECT * FROM Customer WHERE RTRIM(Name) = @username AND RTRIM(Password) = @password";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@username", username);
+                            command.Parameters.AddWithValue("@password", password);
+
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.HasRows)
+                                {
+                                    CustomerBooking c_booking = new CustomerBooking(username, password);
+                                    c_booking.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
+
         }
 
         private void CustomerLoginLogo_Click(object sender, EventArgs e)
@@ -48,6 +81,11 @@ namespace ProjectEDP
         }
 
         private void CustomerLoginLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginCustomer_Load(object sender, EventArgs e)
         {
 
         }

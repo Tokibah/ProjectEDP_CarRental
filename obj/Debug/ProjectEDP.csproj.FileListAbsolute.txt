@@ -11,7 +11,6 @@ C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.pdb
 C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.exe.config
 C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.AdminLogin.resources
 C:\Users\Ashwin\source\repos\ProjectEDP\obj\Debug\ProjectEDP.LoginCustomer.resources
-
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\bin\Debug\PrimeWheel.mdf
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\bin\Debug\PrimeWheel_log.ldf
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\bin\Debug\ProjectEDP.exe.config
@@ -29,4 +28,3 @@ C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\obj\Debug\ProjectE
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\obj\Debug\ProjectEDP.csproj.CoreCompileInputs.cache
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\obj\Debug\ProjectEDP.exe
 C:\Users\arifz\OneDrive\Documents\GitHub\ProjectEDP_CarRental\obj\Debug\ProjectEDP.pdb
-

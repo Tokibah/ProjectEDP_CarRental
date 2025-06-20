@@ -154,6 +154,7 @@
             this.Controls.Add(this.CustomerLoginLogo);
             this.Name = "LoginCustomer";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconCust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameIconCusr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerLoginLogo)).EndInit();

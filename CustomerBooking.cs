@@ -10,6 +10,25 @@ namespace ProjectEDP
     public partial class CustomerBooking : Form
     {
 
+        private string username;
+        private string password;
+
+        // ✅ This is the constructor you were missing
+        public CustomerBooking(string username, string password)
+        {
+            InitializeComponent();
+            this.username = username;
+            this.password = password;
+
+            // ✅ Bind event handlers here
+            this.NEXT.Click += NEXT_Click;
+            this.PREVIOUS.Click += PREVIOUS_Click;
+            this.TotalAmount.Click += TotalAmount_Click;
+            this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
+        }
+
+
+
         // Define the list of available cars - ONLY Saga, Civic, Sentra
         private List<string> carList = new List<string> {
             "Proton Saga",   // Index 0
@@ -23,18 +42,6 @@ namespace ProjectEDP
 
         // Dictionary to store car rates per hour (Car Name -> Rate)
         private Dictionary<string, decimal> carRatesPerHour = new Dictionary<string, decimal>();
-
-        public CustomerBooking()
-        {
-            InitializeComponent();
-
-            // Bind event handlers to controls
-            this.Load += CustomerBooking_Load;
-            this.NEXT.Click += NEXT_Click;
-            this.PREVIOUS.Click += PREVIOUS_Click;
-            this.TotalAmount.Click += TotalAmount_Click;
-            this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
-        }
 
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -240,7 +247,12 @@ namespace ProjectEDP
         private void TotalAmount_Click_1(object sender, EventArgs e) { /* This might be a duplicate event handler binding if TotalAmount.Click is also used */ }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
-        private void groupBox1_Enter(object sender, EventArgs e) { }
+
         private void TypeOfCar_Click(object sender, EventArgs e) { }
+
+        private void CustomerBooking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
