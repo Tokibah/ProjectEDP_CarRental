@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\arifz\\onedrive\\documents\\github\\projectedp_carrental\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\arifz\\onedrive\\documents\\github\\projectedp_carrental\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\arifz\\onedrive\\documents\\github\\projectedp_carrental\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\arifz\\onedrive\\documents\\github\\projectedp_carrental\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\arifz\\onedrive\\documents\\github\\projectedp_carrental\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 346,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,18 +42,69 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\LoginCustomer.cs",
+              "RelativeDocumentMoniker": "LoginCustomer.cs",
+              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\LoginCustomer.cs",
+              "RelativeToolTip": "LoginCustomer.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAMwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T02:39:58.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LoginCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\LoginCustomer.cs",
+              "RelativeDocumentMoniker": "LoginCustomer.cs",
+              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\LoginCustomer.cs [Design]",
+              "RelativeToolTip": "LoginCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T02:39:56.591Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserType.cs",
+              "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\UserType.cs",
+              "RelativeDocumentMoniker": "UserType.cs",
+              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\UserType.cs",
+              "RelativeToolTip": "UserType.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAawBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T02:39:05.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserType.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\UserType.cs",
+              "RelativeDocumentMoniker": "UserType.cs",
+              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\UserType.cs [Design]",
+              "RelativeToolTip": "UserType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T02:39:03.364Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PrimeWheelDataSet.xsd",
               "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\PrimeWheelDataSet.xsd",
               "RelativeDocumentMoniker": "PrimeWheelDataSet.xsd",
               "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\PrimeWheelDataSet.xsd",
               "RelativeToolTip": "PrimeWheelDataSet.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-05-26T07:29:06.245Z"
+              "WhenOpened": "2025-05-26T07:29:06.245Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AdminDashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\AdminDashboard.cs",
               "RelativeDocumentMoniker": "AdminDashboard.cs",

@@ -36,5 +36,20 @@ namespace ProjectEDP
                 this.Hide();
             }
         }
+
+        private void CustomerLoginLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameTxtBoxCust_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerLoginLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

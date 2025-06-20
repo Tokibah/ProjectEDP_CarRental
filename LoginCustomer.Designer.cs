@@ -49,6 +49,7 @@
             this.UsernameTxtBoxCust.Name = "UsernameTxtBoxCust";
             this.UsernameTxtBoxCust.Size = new System.Drawing.Size(193, 27);
             this.UsernameTxtBoxCust.TabIndex = 13;
+            this.UsernameTxtBoxCust.TextChanged += new System.EventHandler(this.UsernameTxtBoxCust_TextChanged);
             // 
             // LogInUsernameCustLabel
             // 
@@ -104,6 +105,7 @@
             this.CustomerLoginLabel.Size = new System.Drawing.Size(188, 29);
             this.CustomerLoginLabel.TabIndex = 19;
             this.CustomerLoginLabel.Text = "Customer Login";
+            this.CustomerLoginLabel.Click += new System.EventHandler(this.CustomerLoginLabel_Click);
             // 
             // PasswordIconCust
             // 
@@ -134,6 +136,7 @@
             this.CustomerLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CustomerLoginLogo.TabIndex = 0;
             this.CustomerLoginLogo.TabStop = false;
+            this.CustomerLoginLogo.Click += new System.EventHandler(this.CustomerLoginLogo_Click);
             // 
             // LoginCustomer
             // 
