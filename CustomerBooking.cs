@@ -1,190 +1,146 @@
 ﻿using System;
-
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
-
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProjectEDP
 {
     public partial class CustomerBooking : Form
     {
-
         private string username;
         private string password;
 
-        // ✅ This is the constructor you were missing
         public CustomerBooking(string username, string password)
         {
             InitializeComponent();
             this.username = username;
             this.password = password;
 
-            // ✅ Bind event handlers here
             this.NEXT.Click += NEXT_Click;
             this.PREVIOUS.Click += PREVIOUS_Click;
             this.TotalAmount.Click += TotalAmount_Click;
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
+        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
+        private List<CarData> availableCars = new List<CarData>();
+        private int currentCarIndex = 0;
 
-        // Define the list of available cars - ONLY Saga, Civic, Sentra
-        private List<string> carList = new List<string> {
-            "Proton Saga",   // Index 0
-            "Honda Civic",   // Index 1
-            "Nissan Sentra"  // Index 2
-        };
-        private int currentCarIndex = 0; // Starts at Proton Saga (Index 0)
-
-        // Dictionary to store car images (Car Name -> Image Object)
-        private Dictionary<string, Image> carImages = new Dictionary<string, Image>();
-
-        // Dictionary to store car rates per hour (Car Name -> Rate)
-        private Dictionary<string, decimal> carRatesPerHour = new Dictionary<string, decimal>();
-
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-
+        public class CarData
         {
-            // --- IMPORTANT: Ensure these image files are added to your Project's Resources ---
-            // In Solution Explorer -> Double-click Properties -> Go to 'Resources' tab.
-            // Click 'Add Resource' -> 'Add Existing File...' and select your images.
-            // Make sure their names here match the names you give them in Resources (e.g., 'saga', 'civic', 'sentra').
-            try
-            {
-                carImages["Proton Saga"] = Properties.Resources.saga;
-                carImages["Honda Civic"] = Properties.Resources.civic; // This line requires 'civic' image resource
-                carImages["Nissan Sentra"] = Properties.Resources.sentra;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(
-                    "Error loading one or more car images. Please ensure 'saga', 'civic', and 'sentra' are correctly added to your project's Resources (Properties -> Resources tab) with the exact names.\n\nError: " + ex.Message,
-                    "Image Loading Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-            }
-
-            // Define car rates per hour
-            carRatesPerHour["Proton Saga"] = 15.00m; // Adjust these rates as needed
-            carRatesPerHour["Honda Civic"] = 25.00m;
-            carRatesPerHour["Nissan Sentra"] = 20.00m;
-
-            // Load details for the initial car (Proton Saga)
-            LoadCarDetails();
+            public string CarID { get; set; }  // FIX: Changed to string
+            public string Name { get; set; }
+            public decimal PriceHour { get; set; }
+            public string ImagePath { get; set; }
+            public int Status { get; set; }
         }
 
-        private void LoadCarDetails()
+        private void CustomerBooking_Load(object sender, EventArgs e)
         {
-            if (carList.Count == 0)
+            LoadAvailableCarsFromDatabase();
+        }
+
+        private void LoadAvailableCarsFromDatabase()
+        {
+            availableCars.Clear();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
-                CarTypeLabel.Text = "No car available";
-                CarRateStatic.Text = ""; // Clear rate display
-                TypeOfCar.Visible = false;
+                conn.Open();
+                string query = "SELECT * FROM Car";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    availableCars.Add(new CarData
+                    {
+                        CarID = reader["Car_id"].ToString(), // FIXED
+                        Name = reader["Name"].ToString(),
+                        PriceHour = Convert.ToDecimal(reader["PriceHour"]),
+                        ImagePath = reader["CarImage"].ToString(),
+                        Status = Convert.ToInt32(reader["Status"])
+                    });
+                }
+
+                reader.Close();
+            }
+
+            if (availableCars.Count == 0)
+            {
+                MessageBox.Show("No available cars at the moment.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            string selectedCar = carList[currentCarIndex];
-            CarTypeLabel.Text = selectedCar; // Update the car name label
+            currentCarIndex = 0;
+            LoadCarDetailsFromDatabase();
+        }
 
-            // Display the car's hourly rate
-            if (carRatesPerHour.ContainsKey(selectedCar))
+        private void LoadCarDetailsFromDatabase()
+        {
+            if (availableCars.Count == 0) return;
+
+            var car = availableCars[currentCarIndex];
+            CarTypeLabel.Text = car.Name;
+            CarRateStatic.Text = car.PriceHour.ToString("F2");
+
+            if (File.Exists(car.ImagePath))
             {
-                CarRateStatic.Text = carRatesPerHour[selectedCar].ToString("F2");
+                TypeOfCar.Image = Image.FromFile(car.ImagePath);
+                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
             {
-                CarRateStatic.Text = "N/A"; // Rate not found
-                MessageBox.Show($"Hourly rate for '{selectedCar}' is not defined in the application's configuration.", "Configuration Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TypeOfCar.Image = null;
+                MessageBox.Show($"Image file not found at path: {car.ImagePath}");
             }
+        }
 
-            // Display the car image
-            if (carImages.ContainsKey(selectedCar) && carImages[selectedCar] != null)
-            {
-                TypeOfCar.Image = carImages[selectedCar];
-                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage; // Ensures image fits the PictureBox
-                TypeOfCar.Visible = true;
-            }
-            else
-            {
-                // This message will specifically tell you if the Civic image is the problem
-                MessageBox.Show(
-                    $"Image for '{selectedCar}' was not found or failed to load from Properties.Resources. Please verify it's correctly added and named ('civic').",
-                    "Image Missing/Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                TypeOfCar.Image = null; // Clear any previous image
-                TypeOfCar.Visible = false;
-            }
-
-            System.Diagnostics.Debug.WriteLine($"Current Index: {currentCarIndex}, Car: {carList[currentCarIndex]}");
+        private void NEXT_Click(object sender, EventArgs e)
+        {
+            if (availableCars.Count == 0) return;
+            currentCarIndex = (currentCarIndex + 1) % availableCars.Count;
+            LoadCarDetailsFromDatabase();
         }
 
         private void PREVIOUS_Click(object sender, EventArgs e)
         {
-            // Wrap around to the last car if at the first car
-            if (carList.Count == 0) return;
-            currentCarIndex = (currentCarIndex - 1 + carList.Count) % carList.Count;
-            LoadCarDetails();
-        }
-
-
-        private void NEXT_Click(object sender, EventArgs e)
-        {
-            // Wrap around to the first car if at the last car
-            if (carList.Count == 0) return;
-            currentCarIndex = (currentCarIndex + 1) % carList.Count;
-            LoadCarDetails();
+            if (availableCars.Count == 0) return;
+            currentCarIndex = (currentCarIndex - 1 + availableCars.Count) % availableCars.Count;
+            LoadCarDetailsFromDatabase();
         }
 
         private void TotalAmount_Click(object sender, EventArgs e)
         {
-            DateTime today = DateTime.Today; // Only date component of today
-            DateTime rentDate = RentDate.Value;     // Full DateTime from RentDate picker
-            DateTime returnDate = ReturnDate.Value; // Full DateTime from ReturnDate picker
+            DateTime today = DateTime.Today;
+            DateTime rentDate = RentDate.Value;
+            DateTime returnDate = ReturnDate.Value;
 
-            // Date validation
             if (rentDate < today)
             {
-                MessageBox.Show("Rental date cannot be in the past.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Rental date cannot be in the past.");
                 return;
             }
 
             if (returnDate <= rentDate)
             {
-                MessageBox.Show("Return date must be after the rental date and time.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Return date must be after the rental date.");
                 return;
             }
 
             TimeSpan duration = returnDate - rentDate;
-
-            // Enforce maximum rental duration (e.g., 30 days)
-            if (duration.TotalHours > (30 * 24)) // 30 days * 24 hours/day
+            if (duration.TotalHours > (30 * 24))
             {
-                MessageBox.Show("Maximum rental duration is 30 days.", "Limit Exceeded", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Maximum rental duration is 30 days.");
                 return;
             }
 
-            // Get the hourly rate for the currently selected car
-            string selectedCar = carList[currentCarIndex];
-            decimal ratePerHour = 0m;
-
-            if (carRatesPerHour.ContainsKey(selectedCar))
-            {
-                ratePerHour = carRatesPerHour[selectedCar];
-            }
-            else
-            {
-                MessageBox.Show($"Hourly rate for '{selectedCar}' is not configured. Cannot calculate total amount.", "Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Calculate total amount
+            decimal ratePerHour = availableCars[currentCarIndex].PriceHour;
             decimal totalAmount = (decimal)duration.TotalHours * ratePerHour;
-            PriceRESULT.Text = totalAmount.ToString("F2"); // Display with 2 decimal places
+            PriceRESULT.Text = totalAmount.ToString("F2");
         }
 
         private void SubmitBtnRentBook_Click(object sender, EventArgs e)
@@ -195,64 +151,91 @@ namespace ProjectEDP
             string payment = GetSelectedPaymentType();
             string amount = PriceRESULT.Text;
 
-            // Input validation before confirming booking
-            if (string.IsNullOrWhiteSpace(pickup))
+            if (string.IsNullOrWhiteSpace(pickup) || string.IsNullOrWhiteSpace(ret))
             {
-                MessageBox.Show("Please select a Pickup Location.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(ret))
-            {
-                MessageBox.Show("Please select a Return Location.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select both Pickup and Return locations.");
                 return;
             }
 
             if (payment == "Not selected")
             {
-                MessageBox.Show("Please select a Payment Type (Cash, QR, FPX, TNG E-Wallet).", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a payment method.");
                 return;
             }
 
-            // Validate that an amount has been calculated and is valid
             if (string.IsNullOrWhiteSpace(amount) || !decimal.TryParse(amount, out decimal parsedAmount) || parsedAmount <= 0)
             {
-                MessageBox.Show("Please calculate the Total Amount first, and ensure it's a valid positive number.", "Missing or Invalid Amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please calculate a valid total amount.");
                 return;
             }
 
-            // Display booking confirmation
-            MessageBox.Show(
-                $"Booking Confirmed:\n\nCar: {car}\nRental Date: {RentDate.Value.ToShortDateString()} @ {RentDate.Value.ToShortTimeString()}\nReturn Date: {ReturnDate.Value.ToShortDateString()} @ {ReturnDate.Value.ToShortTimeString()}\n\nPickup Location: {pickup}\nReturn Location: {ret}\nPayment Type: {payment}\nTotal Amount: RM {amount}",
-                "Booking Successful!",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            if (availableCars[currentCarIndex].Status == 0)
+            {
+                MessageBox.Show("This car is not available for booking.", "Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            this.Close(); // Close the booking form after successful submission
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
+
+                    var selectedCar = availableCars[currentCarIndex];
+                    string custID = GetCustomerId(username); // FIX: changed to string
+
+                    string bookingID = "BOOK_" + DateTime.Now.ToString("yyyyMMddHHmmssfff");
+
+                    string insertQuery = @"INSERT INTO Booking (Book_id, RentDate, ReturnDate, Cust_id, Car_id, Status)
+                                           VALUES (@bookid, @rent, @return, @cust, @car, 0)";
+                    SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
+                    insertCmd.Parameters.AddWithValue("@bookid", bookingID);
+                    insertCmd.Parameters.AddWithValue("@rent", RentDate.Value);
+                    insertCmd.Parameters.AddWithValue("@return", ReturnDate.Value);
+                    insertCmd.Parameters.AddWithValue("@cust", custID);
+                    insertCmd.Parameters.AddWithValue("@car", selectedCar.CarID); // FIXED
+                    insertCmd.ExecuteNonQuery();
+
+                    string updateQuery = "UPDATE Car SET Status = 0 WHERE Car_id = @carId";
+                    SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+                    updateCmd.Parameters.AddWithValue("@carId", selectedCar.CarID); // FIXED
+                    updateCmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Booking confirmed and car status updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during booking: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        // Helper method to determine selected payment type
+        private string GetCustomerId(string username) // FIXED: returns string, not int
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Cust_id FROM Customer WHERE Name = @name", conn);
+                cmd.Parameters.AddWithValue("@name", username);
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : "-1";
+            }
+        }
+
         private string GetSelectedPaymentType()
         {
             if (CashPayment.Checked) return "Cash";
             if (QR.Checked) return "QR Payment";
             if (FPXBanking.Checked) return "FPX Online Banking";
             if (TNGWallet.Checked) return "TNG E-Wallet";
-            return "Not selected"; // If no payment option is selected
+            return "Not selected";
         }
 
-        
         private void CarRateStatic_TextChanged(object sender, EventArgs e) { }
-        private void TotalAmount_Click_1(object sender, EventArgs e) { /* This might be a duplicate event handler binding if TotalAmount.Click is also used */ }
+        private void TotalAmount_Click_1(object sender, EventArgs e) { }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
-
         private void TypeOfCar_Click(object sender, EventArgs e) { }
-
-        private void CustomerBooking_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
