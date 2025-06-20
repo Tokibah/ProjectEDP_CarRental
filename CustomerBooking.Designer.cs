@@ -1,4 +1,6 @@
-﻿namespace ProjectEDP
+﻿using System;
+
+namespace ProjectEDP
 {
     partial class CustomerBooking
     {
@@ -73,6 +75,7 @@
             this.TotalAmount.TabIndex = 38;
             this.TotalAmount.Text = "Total Amount, RM";
             this.TotalAmount.UseVisualStyleBackColor = true;
+            this.TotalAmount.Click += new System.EventHandler(this.TotalAmount_Click_1);
             // 
             // CarRateLabel
             // 
@@ -105,6 +108,7 @@
             this.NEXT.TabIndex = 30;
             this.NEXT.Text = "Next";
             this.NEXT.UseVisualStyleBackColor = true;
+            this.NEXT.Click += new System.EventHandler(this.NEXT_Click);
             // 
             // PREVIOUS
             // 
@@ -115,6 +119,7 @@
             this.PREVIOUS.TabIndex = 29;
             this.PREVIOUS.Text = "Previous";
             this.PREVIOUS.UseVisualStyleBackColor = true;
+            this.PREVIOUS.Click += new System.EventHandler(this.PREVIOUS_Click);
             // 
             // RentDate
             // 
@@ -313,6 +318,7 @@
             this.CarRateStatic.Name = "CarRateStatic";
             this.CarRateStatic.Size = new System.Drawing.Size(100, 33);
             this.CarRateStatic.TabIndex = 47;
+            this.CarRateStatic.TextChanged += new System.EventHandler(this.CarRateStatic_TextChanged);
             // 
             // SubmitBtnRentBook
             // 
@@ -327,13 +333,14 @@
             // 
             // TypeOfCar
             // 
-            this.TypeOfCar.Image = global::ProjectEDP.Properties.Resources.sedan;
+            this.TypeOfCar.Image = global::ProjectEDP.Properties.Resources.civic;
             this.TypeOfCar.Location = new System.Drawing.Point(19, 40);
             this.TypeOfCar.Name = "TypeOfCar";
             this.TypeOfCar.Size = new System.Drawing.Size(366, 249);
             this.TypeOfCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TypeOfCar.TabIndex = 28;
             this.TypeOfCar.TabStop = false;
+            this.TypeOfCar.Click += new System.EventHandler(this.TypeOfCar_Click);
             // 
             // CustBookingLabel
             // 
@@ -374,6 +381,7 @@
             this.Controls.Add(this.TypeOfCar);
             this.Name = "CustomerBooking";
             this.Text = "CustomerBooking";
+            this.Load += new System.EventHandler(this.CustomerBooking_Load);
             this.PaymentTypeGpBoxLabel.ResumeLayout(false);
             this.PaymentTypeGpBoxLabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TypeOfCar)).EndInit();

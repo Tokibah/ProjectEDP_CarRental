@@ -40,10 +40,9 @@
             // Customer
             // 
             this.Customer.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customer.Location = new System.Drawing.Point(773, 226);
-            this.Customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Customer.Location = new System.Drawing.Point(580, 184);
             this.Customer.Name = "Customer";
-            this.Customer.Size = new System.Drawing.Size(193, 62);
+            this.Customer.Size = new System.Drawing.Size(145, 50);
             this.Customer.TabIndex = 1;
             this.Customer.Text = "Customer";
             this.Customer.UseVisualStyleBackColor = true;
@@ -52,10 +51,9 @@
             // Admin
             // 
             this.Admin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(773, 336);
-            this.Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Admin.Location = new System.Drawing.Point(580, 273);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(193, 62);
+            this.Admin.Size = new System.Drawing.Size(145, 50);
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Admin";
             this.Admin.UseVisualStyleBackColor = true;
@@ -65,10 +63,9 @@
             // 
             this.Form1Title.AutoSize = true;
             this.Form1Title.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Form1Title.Location = new System.Drawing.Point(16, 23);
-            this.Form1Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Form1Title.Location = new System.Drawing.Point(12, 19);
             this.Form1Title.Name = "Form1Title";
-            this.Form1Title.Size = new System.Drawing.Size(250, 56);
+            this.Form1Title.Size = new System.Drawing.Size(203, 45);
             this.Form1Title.TabIndex = 3;
             this.Form1Title.Text = "PrimeWheels\r\n";
             this.Form1Title.Click += new System.EventHandler(this.Form1Title_Click);
@@ -81,10 +78,9 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(732, 132);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(549, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 40);
+            this.label1.Size = new System.Drawing.Size(214, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "Choose User Type";
             // 
@@ -92,10 +88,9 @@
             // 
             this.Form1Title2.AutoSize = true;
             this.Form1Title2.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Form1Title2.Location = new System.Drawing.Point(115, 69);
-            this.Form1Title2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Form1Title2.Location = new System.Drawing.Point(86, 56);
             this.Form1Title2.Name = "Form1Title2";
-            this.Form1Title2.Size = new System.Drawing.Size(348, 56);
+            this.Form1Title2.Size = new System.Drawing.Size(281, 45);
             this.Form1Title2.TabIndex = 6;
             this.Form1Title2.Text = "Car Rental Service\r\n";
             // 
@@ -103,29 +98,28 @@
             // 
             this.HotelIMG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.HotelIMG.Image = global::ProjectEDP.Properties.Resources._299854321_571182288130301_6584559507016416073_n;
-            this.HotelIMG.Location = new System.Drawing.Point(43, 132);
-            this.HotelIMG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HotelIMG.Location = new System.Drawing.Point(32, 107);
             this.HotelIMG.Name = "HotelIMG";
-            this.HotelIMG.Size = new System.Drawing.Size(393, 349);
+            this.HotelIMG.Size = new System.Drawing.Size(296, 284);
             this.HotelIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HotelIMG.TabIndex = 4;
             this.HotelIMG.TabStop = false;
             // 
             // UserType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 554);
+            this.ClientSize = new System.Drawing.Size(911, 450);
             this.Controls.Add(this.Form1Title2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HotelIMG);
             this.Controls.Add(this.Form1Title);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.Customer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserSelection";
+            this.Load += new System.EventHandler(this.UserType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HotelIMG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\user\\source\\repos\\projectedp_carrental\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\user\\source\\repos\\projectedp_carrental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "AdminDashboard.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminDashboard.cs",
-              "RelativeToolTip": "AdminDashboard.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAkwEMAAAAJAAAAAAAAAA==",
+              "Title": "CustomerBooking.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\CustomerBooking.cs",
+              "RelativeDocumentMoniker": "CustomerBooking.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\CustomerBooking.cs",
+              "RelativeToolTip": "CustomerBooking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:01:50.779Z",
+              "WhenOpened": "2025-06-20T00:45:17.394Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "AdminDashboard.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminDashboard.cs [Design]",
-              "RelativeToolTip": "AdminDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:56:02.512Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

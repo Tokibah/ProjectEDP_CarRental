@@ -29,9 +29,16 @@ namespace ProjectEDP
 
         private void Customer_Click(object sender, EventArgs e)
         {
+            CustomerBooking form = new CustomerBooking();
+            form.Show();
         }
 
         private void Form1Title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserType_Load(object sender, EventArgs e)
         {
 
         }

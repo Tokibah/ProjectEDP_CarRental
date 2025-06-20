@@ -73,6 +73,16 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap civic {
+            get {
+                object obj = ResourceManager.GetObject("civic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipart__person_icon__cliparts_15 {
             get {
                 object obj = ResourceManager.GetObject("clipart--person-icon--cliparts-15", resourceCulture);
@@ -103,6 +113,16 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap saga {
+            get {
+                object obj = ResourceManager.GetObject("saga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sample_User_Icon {
             get {
                 object obj = ResourceManager.GetObject("Sample_User_Icon", resourceCulture);
@@ -113,9 +133,9 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sedan {
+        internal static System.Drawing.Bitmap sentra {
             get {
-                object obj = ResourceManager.GetObject("sedan", resourceCulture);
+                object obj = ResourceManager.GetObject("sentra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

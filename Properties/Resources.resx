@@ -139,7 +139,13 @@
   <data name="Hatchback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hatchback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sedan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sedan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="civic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\civic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+	<data name="sentra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\sentra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="saga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\saga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
 </root>
