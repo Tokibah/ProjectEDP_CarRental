@@ -1,12 +1,15 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Drawing;
+
 using System.Windows.Forms;
 
 namespace ProjectEDP
 {
     public partial class CustomerBooking : Form
     {
+
         // Define the list of available cars - ONLY Saga, Civic, Sentra
         private List<string> carList = new List<string> {
             "Proton Saga",   // Index 0
@@ -33,7 +36,9 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
-        private void CustomerBooking_Load(object sender, EventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+
         {
             // --- IMPORTANT: Ensure these image files are added to your Project's Resources ---
             // In Solution Explorer -> Double-click Properties -> Go to 'Resources' tab.
@@ -118,6 +123,7 @@ namespace ProjectEDP
             currentCarIndex = (currentCarIndex - 1 + carList.Count) % carList.Count;
             LoadCarDetails();
         }
+
 
         private void NEXT_Click(object sender, EventArgs e)
         {

@@ -265,6 +265,7 @@ namespace ProjectEDP
             this.PaymentTypeGpBoxLabel.TabIndex = 46;
             this.PaymentTypeGpBoxLabel.TabStop = false;
             this.PaymentTypeGpBoxLabel.Text = "Payment Type";
+            this.PaymentTypeGpBoxLabel.Enter += new System.EventHandler(this.PaymentTypeGpBoxLabel_Enter);
             // 
             // TNGWallet
             // 
