@@ -35,6 +35,7 @@ namespace ProjectEDP
             public string Name { get; set; }
             public decimal PriceHour { get; set; }
             public string ImagePath { get; set; }
+            public string ImageResourceName { get; set; } // <-- Add this property
             public int Status { get; set; }
         }
 
@@ -58,10 +59,11 @@ namespace ProjectEDP
                 {
                     availableCars.Add(new CarData
                     {
-                        CarID = reader["Car_id"].ToString(), // FIXED
+                        CarID = reader["Car_id"].ToString(),
                         Name = reader["Name"].ToString(),
                         PriceHour = Convert.ToDecimal(reader["PriceHour"]),
-                        ImagePath = reader["CarImage"].ToString(),
+                        ImagePath = reader["Resources"] != DBNull.Value ? reader["CarImage"].ToString() : string.Empty,
+                        ImageResourceName = reader["Resources"] != DBNull.Value ? reader["CarImageResource"].ToString() : string.Empty,
                         Status = Convert.ToInt32(reader["Status"])
                     });
                 }
@@ -92,10 +94,26 @@ namespace ProjectEDP
                 TypeOfCar.Image = Image.FromFile(car.ImagePath);
                 TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+            else if (!string.IsNullOrEmpty(car.ImageResourceName))
+            {
+                // Try to load from resources using the resource name from the database
+                TypeOfCar.Image = (Image)Properties.Resources.ResourceManager.GetObject(car.ImageResourceName);
+                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (TypeOfCar.Image == null)
+                {
+                    MessageBox.Show($"Resource image '{car.ImageResourceName}' not found in project resources.");
+                }
+            }
             else
             {
-                TypeOfCar.Image = null;
-                MessageBox.Show($"Image file not found at path: {car.ImagePath}");
+                // Try to use the car name as the resource name (lowercase, no spaces)
+                string resourceName = car.Name.Replace(" ", "").ToLower();
+                TypeOfCar.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceName);
+                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (TypeOfCar.Image == null)
+                {
+                    MessageBox.Show($"Image file not found at path: {car.ImagePath} and resource '{resourceName}' not found.");
+                }
             }
         }
 
