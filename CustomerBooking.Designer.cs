@@ -330,17 +330,16 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.TabIndex = 48;
             this.SubmitBtnRentBook.Text = "Submit";
             this.SubmitBtnRentBook.UseVisualStyleBackColor = false;
+            this.SubmitBtnRentBook.Click += new System.EventHandler(this.SubmitBtnRentBook_Click_1);
             // 
             // TypeOfCar
             // 
-            this.TypeOfCar.Image = global::ProjectEDP.Properties.Resources.civic;
             this.TypeOfCar.Location = new System.Drawing.Point(19, 40);
             this.TypeOfCar.Name = "TypeOfCar";
             this.TypeOfCar.Size = new System.Drawing.Size(366, 249);
             this.TypeOfCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TypeOfCar.TabIndex = 28;
             this.TypeOfCar.TabStop = false;
-            this.TypeOfCar.Click += new System.EventHandler(this.TypeOfCar_Click);
             // 
             // CustBookingLabel
             // 

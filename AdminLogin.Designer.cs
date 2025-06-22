@@ -108,7 +108,7 @@
             // 
             // PasswordIconAdmin
             // 
-            this.PasswordIconAdmin.Image = global::ProjectEDP.Properties.Resources.password_148;
+            this.PasswordIconAdmin.Image = global::ProjectEDP.Properties.CarImages.password_148;
             this.PasswordIconAdmin.Location = new System.Drawing.Point(320, 308);
             this.PasswordIconAdmin.Name = "PasswordIconAdmin";
             this.PasswordIconAdmin.Size = new System.Drawing.Size(25, 25);
@@ -118,7 +118,7 @@
             // 
             // UsernameIconAdmin
             // 
-            this.UsernameIconAdmin.Image = global::ProjectEDP.Properties.Resources.Sample_User_Icon;
+            this.UsernameIconAdmin.Image = global::ProjectEDP.Properties.CarImages.Sample_User_Icon;
             this.UsernameIconAdmin.Location = new System.Drawing.Point(320, 242);
             this.UsernameIconAdmin.Name = "UsernameIconAdmin";
             this.UsernameIconAdmin.Size = new System.Drawing.Size(25, 25);
@@ -128,7 +128,7 @@
             // 
             // CustomerLoginLogo
             // 
-            this.CustomerLoginLogo.Image = global::ProjectEDP.Properties.Resources.clipart__person_icon__cliparts_15;
+            this.CustomerLoginLogo.Image = global::ProjectEDP.Properties.CarImages.clipart__person_icon__cliparts_15;
             this.CustomerLoginLogo.Location = new System.Drawing.Point(398, 82);
             this.CustomerLoginLogo.Name = "CustomerLoginLogo";
             this.CustomerLoginLogo.Size = new System.Drawing.Size(90, 112);

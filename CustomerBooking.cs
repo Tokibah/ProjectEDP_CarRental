@@ -24,20 +24,33 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
-        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private Dictionary<string, string> carImageMap = new Dictionary<string, string>
+{
+    { "Honda Civic", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\civic.png" },
+    { "Proton Saga", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\saga.jpg" },
+    { "Nissan Sentra", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\sentra.jpg" },
+    { "Nissan Almera", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\almera.jpg" },
+    { "SUV", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\suv.png" },
+    { "Hatchback", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\Hatchback.png" }, 
+    // Add more mappings as needed
+    //precommit
+};
+
+
+        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;
 
         public class CarData
         {
-            public string CarID { get; set; }  // FIX: Changed to string
+            public string CarID { get; set; }
             public string Name { get; set; }
             public decimal PriceHour { get; set; }
             public string ImagePath { get; set; }
-            public string ImageResourceName { get; set; } // <-- Add this property
             public int Status { get; set; }
         }
+
 
         private void CustomerBooking_Load(object sender, EventArgs e)
         {
@@ -61,11 +74,11 @@ namespace ProjectEDP
                     {
                         CarID = reader["Car_id"].ToString(),
                         Name = reader["Name"].ToString(),
-                        PriceHour = Convert.ToDecimal(reader["PriceHour"]),
-                        ImagePath = reader["Resources"] != DBNull.Value ? reader["CarImage"].ToString() : string.Empty,
-                        ImageResourceName = reader["Resources"] != DBNull.Value ? reader["CarImageResource"].ToString() : string.Empty,
-                        Status = Convert.ToInt32(reader["Status"])
+                        PriceHour = reader["PriceHour"] != DBNull.Value ? Convert.ToDecimal(reader["PriceHour"]) : 0,
+                        ImagePath = reader["CarImage"] != DBNull.Value ? reader["CarImage"].ToString() : string.Empty,
+                        Status = reader["Status"] != DBNull.Value ? Convert.ToInt32(reader["Status"]) : 0
                     });
+
                 }
 
                 reader.Close();
@@ -86,36 +99,43 @@ namespace ProjectEDP
             if (availableCars.Count == 0) return;
 
             var car = availableCars[currentCarIndex];
+
+            // Display full car name
             CarTypeLabel.Text = car.Name;
+            CarTypeLabel.Visible = true;
+            CarTypeLabel.ForeColor = Color.Black;
+
+            // Display price
             CarRateStatic.Text = car.PriceHour.ToString("F2");
 
-            if (File.Exists(car.ImagePath))
+            // Get image filename from dictionary
+            string imageFileName;
+            Image carImage = null;
+
+            if (carImageMap.TryGetValue(car.Name, out imageFileName))
             {
-                TypeOfCar.Image = Image.FromFile(car.ImagePath);
-                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            else if (!string.IsNullOrEmpty(car.ImageResourceName))
-            {
-                // Try to load from resources using the resource name from the database
-                TypeOfCar.Image = (Image)Properties.Resources.ResourceManager.GetObject(car.ImageResourceName);
-                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
-                if (TypeOfCar.Image == null)
+                string imagePath = Path.Combine(Application.StartupPath, "CarImages", imageFileName);
+
+                if (File.Exists(imagePath))
                 {
-                    MessageBox.Show($"Resource image '{car.ImageResourceName}' not found in project resources.");
+                    carImage = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    MessageBox.Show($"Image not found: {imagePath}", "Missing Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                // Try to use the car name as the resource name (lowercase, no spaces)
-                string resourceName = car.Name.Replace(" ", "").ToLower();
-                TypeOfCar.Image = (Image)Properties.Resources.ResourceManager.GetObject(resourceName);
-                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
-                if (TypeOfCar.Image == null)
-                {
-                    MessageBox.Show($"Image file not found at path: {car.ImagePath} and resource '{resourceName}' not found.");
-                }
+                MessageBox.Show($"No image mapping found for: {car.Name}", "Missing Mapping", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            TypeOfCar.Image = carImage;
+            TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
+
+
 
         private void NEXT_Click(object sender, EventArgs e)
         {
@@ -200,7 +220,7 @@ namespace ProjectEDP
                     conn.Open();
 
                     var selectedCar = availableCars[currentCarIndex];
-                    string custID = GetCustomerId(username); // FIX: changed to string
+                    string custID = GetCustomerId(username);
 
                     string bookingID = "BOOK_" + DateTime.Now.ToString("yyyyMMddHHmmssfff");
 
@@ -211,12 +231,12 @@ namespace ProjectEDP
                     insertCmd.Parameters.AddWithValue("@rent", RentDate.Value);
                     insertCmd.Parameters.AddWithValue("@return", ReturnDate.Value);
                     insertCmd.Parameters.AddWithValue("@cust", custID);
-                    insertCmd.Parameters.AddWithValue("@car", selectedCar.CarID); // FIXED
+                    insertCmd.Parameters.AddWithValue("@car", selectedCar.CarID);
                     insertCmd.ExecuteNonQuery();
 
                     string updateQuery = "UPDATE Car SET Status = 0 WHERE Car_id = @carId";
                     SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
-                    updateCmd.Parameters.AddWithValue("@carId", selectedCar.CarID); // FIXED
+                    updateCmd.Parameters.AddWithValue("@carId", selectedCar.CarID);
                     updateCmd.ExecuteNonQuery();
                 }
 
@@ -229,7 +249,7 @@ namespace ProjectEDP
             }
         }
 
-        private string GetCustomerId(string username) // FIXED: returns string, not int
+        private string GetCustomerId(string username)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -250,10 +270,28 @@ namespace ProjectEDP
             return "Not selected";
         }
 
+        // Empty handlers (optional cleanup)
         private void CarRateStatic_TextChanged(object sender, EventArgs e) { }
         private void TotalAmount_Click_1(object sender, EventArgs e) { }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
-        private void TypeOfCar_Click(object sender, EventArgs e) { }
+
+        private void SubmitBtnRentBook_Click_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public static class SqlDataReaderExtensions
+    {
+        public static bool HasColumn(this SqlDataReader reader, string columnName)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (reader.GetName(i).Equals(columnName, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            return false;
+        }
     }
 }

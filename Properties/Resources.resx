@@ -136,16 +136,19 @@
   <data name="suv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\suv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="protonsaga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nissanalmera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almera.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hatchback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hatchback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="civic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="hondacivic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\civic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-	<data name="sentra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\sentra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
-	<data name="saga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-		<value>..\Resources\saga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-	</data>
+  <data name="nissansentra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sentra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
