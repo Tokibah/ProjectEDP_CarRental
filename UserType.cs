@@ -50,5 +50,10 @@ namespace ProjectEDP
         {
 
         }
+
+        private void HotelIMG_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
