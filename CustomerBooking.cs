@@ -31,12 +31,13 @@ namespace ProjectEDP
 
         public class CarData
         {
-            public string CarID { get; set; }  // FIX: Changed to string
+            public string CarID { get; set; }
             public string Name { get; set; }
             public decimal PriceHour { get; set; }
             public string ImagePath { get; set; }
             public int Status { get; set; }
         }
+
 
         private void CustomerBooking_Load(object sender, EventArgs e)
         {
@@ -58,12 +59,13 @@ namespace ProjectEDP
                 {
                     availableCars.Add(new CarData
                     {
-                        CarID = reader["Car_id"].ToString(), // FIXED
+                        CarID = reader["Car_id"].ToString(),
                         Name = reader["Name"].ToString(),
-                        PriceHour = Convert.ToDecimal(reader["PriceHour"]),
-                        ImagePath = reader["CarImage"].ToString(),
-                        Status = Convert.ToInt32(reader["Status"])
+                        PriceHour = reader["PriceHour"] != DBNull.Value ? Convert.ToDecimal(reader["PriceHour"]) : 0,
+                        ImagePath = reader["CarImage"] != DBNull.Value ? reader["CarImage"].ToString() : string.Empty,
+                        Status = reader["Status"] != DBNull.Value ? Convert.ToInt32(reader["Status"]) : 0
                     });
+
                 }
 
                 reader.Close();
@@ -87,17 +89,22 @@ namespace ProjectEDP
             CarTypeLabel.Text = car.Name;
             CarRateStatic.Text = car.PriceHour.ToString("F2");
 
-            if (File.Exists(car.ImagePath))
+            Image carImage = null;
+
+            if (!string.IsNullOrEmpty(car.ImagePath) && File.Exists(car.ImagePath))
             {
-                TypeOfCar.Image = Image.FromFile(car.ImagePath);
-                TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
+                carImage = Image.FromFile(car.ImagePath);
             }
             else
             {
-                TypeOfCar.Image = null;
-                MessageBox.Show($"Image file not found at path: {car.ImagePath}");
+                carImage = null;
+                MessageBox.Show("Image file not found at path: " + car.ImagePath, "Image Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            TypeOfCar.Image = carImage;
+            TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
 
         private void NEXT_Click(object sender, EventArgs e)
         {
@@ -182,7 +189,7 @@ namespace ProjectEDP
                     conn.Open();
 
                     var selectedCar = availableCars[currentCarIndex];
-                    string custID = GetCustomerId(username); // FIX: changed to string
+                    string custID = GetCustomerId(username);
 
                     string bookingID = "BOOK_" + DateTime.Now.ToString("yyyyMMddHHmmssfff");
 
@@ -193,12 +200,12 @@ namespace ProjectEDP
                     insertCmd.Parameters.AddWithValue("@rent", RentDate.Value);
                     insertCmd.Parameters.AddWithValue("@return", ReturnDate.Value);
                     insertCmd.Parameters.AddWithValue("@cust", custID);
-                    insertCmd.Parameters.AddWithValue("@car", selectedCar.CarID); // FIXED
+                    insertCmd.Parameters.AddWithValue("@car", selectedCar.CarID);
                     insertCmd.ExecuteNonQuery();
 
                     string updateQuery = "UPDATE Car SET Status = 0 WHERE Car_id = @carId";
                     SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
-                    updateCmd.Parameters.AddWithValue("@carId", selectedCar.CarID); // FIXED
+                    updateCmd.Parameters.AddWithValue("@carId", selectedCar.CarID);
                     updateCmd.ExecuteNonQuery();
                 }
 
@@ -211,7 +218,7 @@ namespace ProjectEDP
             }
         }
 
-        private string GetCustomerId(string username) // FIXED: returns string, not int
+        private string GetCustomerId(string username)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -232,10 +239,24 @@ namespace ProjectEDP
             return "Not selected";
         }
 
+        // Empty handlers (optional cleanup)
         private void CarRateStatic_TextChanged(object sender, EventArgs e) { }
         private void TotalAmount_Click_1(object sender, EventArgs e) { }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
         private void TypeOfCar_Click(object sender, EventArgs e) { }
+    }
+
+    public static class SqlDataReaderExtensions
+    {
+        public static bool HasColumn(this SqlDataReader reader, string columnName)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (reader.GetName(i).Equals(columnName, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+            return false;
+        }
     }
 }
