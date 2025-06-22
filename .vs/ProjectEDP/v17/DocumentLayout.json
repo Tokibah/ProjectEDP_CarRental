@@ -1,35 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_SOURCE_REPOS_PROJECTEDP_CARRENTAL_PRIMEWHEEL.MDF/True/SqlTable/dbo.Car.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\user\\source\\repos\\projectedp_carrental\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\luqma\\onedrive\\documents\\projectedp_carrental\\logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:logincustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|c:\\users\\user\\source\\repos\\projectedp_carrental\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD3D5CF8-C6A2-4D39-B2EF-4A7353F15A3D}|ProjectEDP.csproj|solutionrelative:customerbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-
     }
   ],
   "DocumentGroupContainers": [
@@ -39,97 +21,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 346,
-          "SelectedChildIndex": 0,
-
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginCustomer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\LoginCustomer.cs",
-              "RelativeDocumentMoniker": "LoginCustomer.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\LoginCustomer.cs [Design]*",
-              "RelativeToolTip": "LoginCustomer.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T03:47:57.356Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminLogin.cs",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\AdminLogin.cs",
-              "RelativeDocumentMoniker": "AdminLogin.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\AdminLogin.cs*",
-              "RelativeToolTip": "AdminLogin.cs*",
-              "ViewState": "AgIAABkAAAAAAAAAAAA8wDAAAAClAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T03:47:47.287Z",
+              "Title": "dbo.Car [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_SOURCE_REPOS_PROJECTEDP_CARRENTAL_PRIMEWHEEL.MDF/True/SqlTable/dbo.Car.sql",
+              "ToolTip": "dbo.Car [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-20T15:30:31.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\AdminLogin.cs",
+              "DocumentIndex": 1,
+              "Title": "AdminLogin.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminLogin.cs",
               "RelativeDocumentMoniker": "AdminLogin.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\AdminLogin.cs [Design]*",
-              "RelativeToolTip": "AdminLogin.cs [Design]*",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminLogin.cs",
+              "RelativeToolTip": "AdminLogin.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAWwCAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T03:47:46.027Z",
-
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-
-              "DocumentIndex": 6,
-              "Title": "CustomerBooking.cs",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs",
-              "RelativeDocumentMoniker": "CustomerBooking.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs",
-              "RelativeToolTip": "CustomerBooking.cs",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAowOsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T03:12:11.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomerBooking.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\CustomerBooking.cs",
-              "RelativeDocumentMoniker": "CustomerBooking.cs",
-              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\CustomerBooking.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\CustomerBooking.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T03:12:06.222Z"
-
+              "WhenOpened": "2025-06-20T15:30:08.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-
-              "Title": "LoginCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\LoginCustomer.cs",
-              "RelativeDocumentMoniker": "LoginCustomer.cs",
-              "ToolTip": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\LoginCustomer.cs*",
-              "RelativeToolTip": "LoginCustomer.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAswCcAAAAVAAAAAAAAAA==",
+              "Title": "AdminLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminLogin.cs",
+              "RelativeDocumentMoniker": "AdminLogin.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\ProjectEDP_CarRental\\AdminLogin.cs [Design]",
+              "RelativeToolTip": "AdminLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T02:59:46.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\luqma\\OneDrive\\Documents\\ProjectEDP_CarRental\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "AdminDashboard.cs",
-              "ToolTip": "C:\\Users\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\AdminDashboard.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\arifz\\OneDrive\\Documents\\GitHub\\ProjectEDP_CarRental\\AdminDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:56:02.512Z"
+              "WhenOpened": "2025-06-20T15:28:50.053Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
