@@ -23,14 +23,16 @@ namespace ProjectEDP.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
-        internal static Image civic;
+
+    internal class CarImages {
+        
+
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal CarImages() {
         }
         
         /// <summary>
@@ -40,7 +42,7 @@ namespace ProjectEDP.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjectEDP.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjectEDP.Properties.Resources", typeof(CarImages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -94,9 +96,10 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap honda_civic {
+
+        internal static System.Drawing.Bitmap hondacivic {
             get {
-                object obj = ResourceManager.GetObject("honda civic", resourceCulture);
+                object obj = ResourceManager.GetObject("hondacivic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -104,9 +107,11 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nissan_almera {
+
+        internal static System.Drawing.Bitmap nissanalmera {
             get {
-                object obj = ResourceManager.GetObject("nissan almera", resourceCulture);
+                object obj = ResourceManager.GetObject("nissanalmera", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -114,9 +119,11 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nissan_sentra {
+
+        internal static System.Drawing.Bitmap nissansentra {
             get {
-                object obj = ResourceManager.GetObject("nissan sentra", resourceCulture);
+                object obj = ResourceManager.GetObject("nissansentra", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -134,9 +141,11 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap proton_saga {
+
+        internal static System.Drawing.Bitmap protonsaga {
             get {
-                object obj = ResourceManager.GetObject("proton saga", resourceCulture);
+                object obj = ResourceManager.GetObject("protonsaga", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

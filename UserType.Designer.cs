@@ -97,7 +97,7 @@
             // HotelIMG
             // 
             this.HotelIMG.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HotelIMG.Image = global::ProjectEDP.Properties.Resources._299854321_571182288130301_6584559507016416073_n;
+            this.HotelIMG.Image = global::ProjectEDP.Properties.CarImages._299854321_571182288130301_6584559507016416073_n;
             this.HotelIMG.Location = new System.Drawing.Point(32, 107);
             this.HotelIMG.Name = "HotelIMG";
             this.HotelIMG.Size = new System.Drawing.Size(296, 284);

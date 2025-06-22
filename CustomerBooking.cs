@@ -24,8 +24,20 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
-        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private Dictionary<string, string> carImageMap = new Dictionary<string, string>
+{
+    { "Honda Civic", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\civic.png" },
+    { "Proton Saga", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\saga.jpg" },
+    { "Nissan Sentra", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\sentra.jpg" },
+    { "Nissan Almera", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\almera.jpg" },
+    { "SUV", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\suv.png" },
+    { "Hatchback", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\Hatchback.png" }, 
+    // Add more mappings as needed
+    //precommit
+};
 
+
+        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;
 
@@ -86,19 +98,36 @@ namespace ProjectEDP
             if (availableCars.Count == 0) return;
 
             var car = availableCars[currentCarIndex];
+
+            // Display full car name
             CarTypeLabel.Text = car.Name;
+            CarTypeLabel.Visible = true;
+            CarTypeLabel.ForeColor = Color.Black;
+
+            // Display price
             CarRateStatic.Text = car.PriceHour.ToString("F2");
 
+            // Get image filename from dictionary
+            string imageFileName;
             Image carImage = null;
 
-            if (!string.IsNullOrEmpty(car.ImagePath) && File.Exists(car.ImagePath))
+            if (carImageMap.TryGetValue(car.Name, out imageFileName))
             {
-                carImage = Image.FromFile(car.ImagePath);
+                string imagePath = Path.Combine(Application.StartupPath, "CarImages", imageFileName);
+
+                if (File.Exists(imagePath))
+                {
+                    carImage = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    MessageBox.Show($"Image not found: {imagePath}", "Missing Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                carImage = null;
-                MessageBox.Show("Image file not found at path: " + car.ImagePath, "Image Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"No image mapping found for: {car.Name}", "Missing Mapping", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
 
             TypeOfCar.Image = carImage;
@@ -244,9 +273,9 @@ namespace ProjectEDP
         private void TotalAmount_Click_1(object sender, EventArgs e) { }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
-        private void TypeOfCar_Click(object sender, EventArgs e) { }
 
-        private void PaymentTypeGpBoxLabel_Enter(object sender, EventArgs e)
+
+        private void SubmitBtnRentBook_Click_1(object sender, EventArgs e)
         {
 
         }
