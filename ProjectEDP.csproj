@@ -92,6 +92,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrimeWheelDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.cs" />
     <Compile Include="UserType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,12 +166,6 @@
     <None Include="Resources\password-148.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\suv.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hatchback.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="PrimeWheel.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -180,8 +175,10 @@
     </Content>
     <Content Include="Resources\almera.jpg" />
     <Content Include="Resources\civic.png" />
+    <Content Include="Resources\Hatchback.png" />
     <Content Include="Resources\saga.jpg" />
     <Content Include="Resources\sentra.jpg" />
+    <Content Include="Resources\suv.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -17,24 +17,22 @@ namespace ProjectEDP
             InitializeComponent();
             this.username = username;
             this.password = password;
-
             this.NEXT.Click += NEXT_Click;
             this.PREVIOUS.Click += PREVIOUS_Click;
             this.TotalAmount.Click += TotalAmount_Click;
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
-        private Dictionary<string, string> carImageMap = new Dictionary<string, string>
+        private Dictionary<string, Image> carImageMap = new Dictionary<string, Image>
 {
-    { "Honda Civic", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\civic.png" },
-    { "Proton Saga", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\saga.jpg" },
-    { "Nissan Sentra", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\sentra.jpg" },
-    { "Nissan Almera", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\almera.jpg" },
-    { "SUV", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\suv.png" },
-    { "Hatchback", "C:\\DITP2123\\ProjectEDP_CarRental\\CarImages\\Hatchback.png" }, 
-    // Add more mappings as needed
-    //precommit
+    { "Honda Civic", Properties.CarImages.hondacivic},     
+    { "Proton Saga", Properties.CarImages.protonsaga},        
+    { "Nissan Sentra", Properties.CarImages.nissansentra},    
+    { "Nissan Almera", Properties.CarImages.nissanalmera},
+    { "SUV", Properties.CarImages.suv},
+    { "Hatchback", Properties.CarImages.Hatchback},     
 };
+
 
 
         private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
@@ -64,7 +62,9 @@ namespace ProjectEDP
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string query = "SELECT * FROM Car";
+                // MODIFICATION HERE: Add a WHERE clause to filter by Status
+                // Assuming '1' means available. Adjust if your status codes are different.
+                string query = "SELECT Car_id, Name, PriceHour, CarImage, Status FROM Car WHERE Status = 1"; // Added WHERE clause
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -78,7 +78,6 @@ namespace ProjectEDP
                         ImagePath = reader["CarImage"] != DBNull.Value ? reader["CarImage"].ToString() : string.Empty,
                         Status = reader["Status"] != DBNull.Value ? Convert.ToInt32(reader["Status"]) : 0
                     });
-
                 }
 
                 reader.Close();
@@ -87,13 +86,16 @@ namespace ProjectEDP
             if (availableCars.Count == 0)
             {
                 MessageBox.Show("No available cars at the moment.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Important: If no cars are available, clear the display or show a default message.
+                CarTypeLabel.Text = "No Cars Available";
+                CarRateStatic.Text = "0.00";
+                TypeOfCar.Image = null; // Clear any previously displayed image
                 return;
             }
 
             currentCarIndex = 0;
             LoadCarDetailsFromDatabase();
         }
-
         private void LoadCarDetailsFromDatabase()
         {
             if (availableCars.Count == 0) return;
@@ -110,29 +112,19 @@ namespace ProjectEDP
 
             // Get image filename from dictionary
             string imageFileName;
-            Image carImage = null;
+            Image CarImages = null;
 
-            if (carImageMap.TryGetValue(car.Name, out imageFileName))
+            if (carImageMap.TryGetValue(car.Name, out CarImages))
             {
-                string imagePath = Path.Combine(Application.StartupPath, "CarImages", imageFileName);
-
-                if (File.Exists(imagePath))
-                {
-                    carImage = Image.FromFile(imagePath);
-                }
-                else
-                {
-                    MessageBox.Show($"Image not found: {imagePath}", "Missing Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                TypeOfCar.Image = CarImages;
             }
             else
             {
-                MessageBox.Show($"No image mapping found for: {car.Name}", "Missing Mapping", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"No image found for: {car.Name}", "Missing Mapping", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TypeOfCar.Image = null;
             }
-
-            TypeOfCar.Image = carImage;
-            TypeOfCar.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
 
 
 
