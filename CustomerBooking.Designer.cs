@@ -62,7 +62,7 @@ namespace ProjectEDP
             this.PriceRESULT.BackColor = System.Drawing.SystemColors.Control;
             this.PriceRESULT.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceRESULT.Location = new System.Drawing.Point(1031, 436);
-            this.PriceRESULT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PriceRESULT.Margin = new System.Windows.Forms.Padding(4);
             this.PriceRESULT.Name = "PriceRESULT";
             this.PriceRESULT.Size = new System.Drawing.Size(132, 39);
             this.PriceRESULT.TabIndex = 39;
@@ -71,7 +71,7 @@ namespace ProjectEDP
             // 
             this.TotalAmount.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmount.Location = new System.Drawing.Point(785, 433);
-            this.TotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.TotalAmount.Name = "TotalAmount";
             this.TotalAmount.Size = new System.Drawing.Size(237, 47);
             this.TotalAmount.TabIndex = 38;
@@ -97,7 +97,7 @@ namespace ProjectEDP
             this.CarTypeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CarTypeLabel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CarTypeLabel.Location = new System.Drawing.Point(183, 410);
-            this.CarTypeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarTypeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.CarTypeLabel.Name = "CarTypeLabel";
             this.CarTypeLabel.Size = new System.Drawing.Size(163, 66);
             this.CarTypeLabel.TabIndex = 31;
@@ -107,7 +107,7 @@ namespace ProjectEDP
             // 
             this.NEXT.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NEXT.Location = new System.Drawing.Point(387, 406);
-            this.NEXT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NEXT.Margin = new System.Windows.Forms.Padding(4);
             this.NEXT.Name = "NEXT";
             this.NEXT.Size = new System.Drawing.Size(127, 37);
             this.NEXT.TabIndex = 30;
@@ -119,7 +119,7 @@ namespace ProjectEDP
             // 
             this.PREVIOUS.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PREVIOUS.Location = new System.Drawing.Point(25, 406);
-            this.PREVIOUS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PREVIOUS.Margin = new System.Windows.Forms.Padding(4);
             this.PREVIOUS.Name = "PREVIOUS";
             this.PREVIOUS.Size = new System.Drawing.Size(127, 37);
             this.PREVIOUS.TabIndex = 29;
@@ -131,7 +131,7 @@ namespace ProjectEDP
             // 
             this.RentDate.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RentDate.Location = new System.Drawing.Point(563, 78);
-            this.RentDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RentDate.Margin = new System.Windows.Forms.Padding(4);
             this.RentDate.Name = "RentDate";
             this.RentDate.Size = new System.Drawing.Size(315, 32);
             this.RentDate.TabIndex = 34;
@@ -140,7 +140,7 @@ namespace ProjectEDP
             // 
             this.ReturnDate.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnDate.Location = new System.Drawing.Point(561, 143);
-            this.ReturnDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReturnDate.Margin = new System.Windows.Forms.Padding(4);
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(315, 32);
             this.ReturnDate.TabIndex = 36;
@@ -201,7 +201,7 @@ namespace ProjectEDP
             "",
             "Lubok China"});
             this.PickupLocationComboBox.Location = new System.Drawing.Point(564, 230);
-            this.PickupLocationComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PickupLocationComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.PickupLocationComboBox.Name = "PickupLocationComboBox";
             this.PickupLocationComboBox.Size = new System.Drawing.Size(160, 33);
             this.PickupLocationComboBox.TabIndex = 42;
@@ -261,7 +261,7 @@ namespace ProjectEDP
             "",
             "Lubok China"});
             this.ReturnLocationComboBox.Location = new System.Drawing.Point(564, 308);
-            this.ReturnLocationComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReturnLocationComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ReturnLocationComboBox.Name = "ReturnLocationComboBox";
             this.ReturnLocationComboBox.Size = new System.Drawing.Size(160, 33);
             this.ReturnLocationComboBox.TabIndex = 44;
@@ -274,20 +274,19 @@ namespace ProjectEDP
             this.PaymentTypeGpBoxLabel.Controls.Add(this.CashPayment);
             this.PaymentTypeGpBoxLabel.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaymentTypeGpBoxLabel.Location = new System.Drawing.Point(940, 49);
-            this.PaymentTypeGpBoxLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PaymentTypeGpBoxLabel.Margin = new System.Windows.Forms.Padding(4);
             this.PaymentTypeGpBoxLabel.Name = "PaymentTypeGpBoxLabel";
-            this.PaymentTypeGpBoxLabel.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PaymentTypeGpBoxLabel.Padding = new System.Windows.Forms.Padding(4);
             this.PaymentTypeGpBoxLabel.Size = new System.Drawing.Size(224, 293);
             this.PaymentTypeGpBoxLabel.TabIndex = 46;
             this.PaymentTypeGpBoxLabel.TabStop = false;
             this.PaymentTypeGpBoxLabel.Text = "Payment Type";
-
             // 
             // TNGWallet
             // 
             this.TNGWallet.AutoSize = true;
             this.TNGWallet.Location = new System.Drawing.Point(13, 142);
-            this.TNGWallet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TNGWallet.Margin = new System.Windows.Forms.Padding(4);
             this.TNGWallet.Name = "TNGWallet";
             this.TNGWallet.Size = new System.Drawing.Size(146, 29);
             this.TNGWallet.TabIndex = 3;
@@ -299,7 +298,7 @@ namespace ProjectEDP
             // 
             this.FPXBanking.AutoSize = true;
             this.FPXBanking.Location = new System.Drawing.Point(13, 105);
-            this.FPXBanking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FPXBanking.Margin = new System.Windows.Forms.Padding(4);
             this.FPXBanking.Name = "FPXBanking";
             this.FPXBanking.Size = new System.Drawing.Size(197, 29);
             this.FPXBanking.TabIndex = 2;
@@ -311,7 +310,7 @@ namespace ProjectEDP
             // 
             this.QR.AutoSize = true;
             this.QR.Location = new System.Drawing.Point(13, 68);
-            this.QR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QR.Margin = new System.Windows.Forms.Padding(4);
             this.QR.Name = "QR";
             this.QR.Size = new System.Drawing.Size(135, 29);
             this.QR.TabIndex = 1;
@@ -323,7 +322,7 @@ namespace ProjectEDP
             // 
             this.CashPayment.AutoSize = true;
             this.CashPayment.Location = new System.Drawing.Point(13, 31);
-            this.CashPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CashPayment.Margin = new System.Windows.Forms.Padding(4);
             this.CashPayment.Name = "CashPayment";
             this.CashPayment.Size = new System.Drawing.Size(74, 29);
             this.CashPayment.TabIndex = 0;
@@ -336,7 +335,7 @@ namespace ProjectEDP
             this.CarRateStatic.BackColor = System.Drawing.SystemColors.Control;
             this.CarRateStatic.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CarRateStatic.Location = new System.Drawing.Point(1031, 380);
-            this.CarRateStatic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CarRateStatic.Margin = new System.Windows.Forms.Padding(4);
             this.CarRateStatic.Name = "CarRateStatic";
             this.CarRateStatic.Size = new System.Drawing.Size(132, 39);
             this.CarRateStatic.TabIndex = 47;
@@ -347,7 +346,7 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.BackColor = System.Drawing.Color.SeaShell;
             this.SubmitBtnRentBook.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitBtnRentBook.Location = new System.Drawing.Point(1053, 484);
-            this.SubmitBtnRentBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubmitBtnRentBook.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitBtnRentBook.Name = "SubmitBtnRentBook";
             this.SubmitBtnRentBook.Size = new System.Drawing.Size(111, 62);
             this.SubmitBtnRentBook.TabIndex = 48;
@@ -402,7 +401,7 @@ namespace ProjectEDP
             this.Controls.Add(this.NEXT);
             this.Controls.Add(this.PREVIOUS);
             this.Controls.Add(this.TypeOfCar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerBooking";
             this.Text = "CustomerBooking";
             this.Load += new System.EventHandler(this.CustomerBooking_Load);

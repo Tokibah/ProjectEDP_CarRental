@@ -33,7 +33,7 @@ namespace ProjectEDP
             else
             {
 
-                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
 
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -88,6 +88,11 @@ namespace ProjectEDP
         }
 
         private void LoginCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameIconCusr_Click(object sender, EventArgs e)
         {
 
         }

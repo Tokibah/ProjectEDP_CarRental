@@ -46,7 +46,7 @@
             // 
             this.UsernameTxtBoxCust.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTxtBoxCust.Location = new System.Drawing.Point(468, 298);
-            this.UsernameTxtBoxCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernameTxtBoxCust.Margin = new System.Windows.Forms.Padding(4);
             this.UsernameTxtBoxCust.Name = "UsernameTxtBoxCust";
             this.UsernameTxtBoxCust.Size = new System.Drawing.Size(256, 32);
             this.UsernameTxtBoxCust.TabIndex = 13;
@@ -67,7 +67,7 @@
             // 
             this.PasswordTxtBoxCust.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxtBoxCust.Location = new System.Drawing.Point(468, 379);
-            this.PasswordTxtBoxCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTxtBoxCust.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTxtBoxCust.Name = "PasswordTxtBoxCust";
             this.PasswordTxtBoxCust.Size = new System.Drawing.Size(256, 32);
             this.PasswordTxtBoxCust.TabIndex = 15;
@@ -90,7 +90,7 @@
             this.SubmitBtnLoginCust.BackColor = System.Drawing.Color.SeaShell;
             this.SubmitBtnLoginCust.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitBtnLoginCust.Location = new System.Drawing.Point(531, 447);
-            this.SubmitBtnLoginCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubmitBtnLoginCust.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitBtnLoginCust.Name = "SubmitBtnLoginCust";
             this.SubmitBtnLoginCust.Size = new System.Drawing.Size(111, 62);
             this.SubmitBtnLoginCust.TabIndex = 18;
@@ -115,10 +115,8 @@
             // 
             // PasswordIconCust
             // 
-
- 
-            this.PasswordIconCust.Location = new System.Drawing.Point(320, 308);
-
+            this.PasswordIconCust.Image = global::ProjectEDP.Properties.Resources.password_148;
+            this.PasswordIconCust.Location = new System.Drawing.Point(414, 379);
             this.PasswordIconCust.Name = "PasswordIconCust";
             this.PasswordIconCust.Size = new System.Drawing.Size(33, 31);
             this.PasswordIconCust.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,22 +125,19 @@
             // 
             // UsernameIconCusr
             // 
-
-
-            this.UsernameIconCusr.Location = new System.Drawing.Point(320, 242);
-
+            this.UsernameIconCusr.Image = global::ProjectEDP.Properties.Resources.Sample_User_Icon;
+            this.UsernameIconCusr.Location = new System.Drawing.Point(414, 299);
             this.UsernameIconCusr.Name = "UsernameIconCusr";
             this.UsernameIconCusr.Size = new System.Drawing.Size(33, 31);
             this.UsernameIconCusr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UsernameIconCusr.TabIndex = 16;
             this.UsernameIconCusr.TabStop = false;
+            this.UsernameIconCusr.Click += new System.EventHandler(this.UsernameIconCusr_Click);
             // 
             // CustomerLoginLogo
             // 
-
-  
-            this.CustomerLoginLogo.Location = new System.Drawing.Point(398, 82);
-
+            this.CustomerLoginLogo.Image = global::ProjectEDP.Properties.Resources.clipart__person_icon__cliparts_15;
+            this.CustomerLoginLogo.Location = new System.Drawing.Point(522, 95);
             this.CustomerLoginLogo.Name = "CustomerLoginLogo";
             this.CustomerLoginLogo.Size = new System.Drawing.Size(120, 138);
             this.CustomerLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,7 +159,7 @@
             this.Controls.Add(this.UsernameTxtBoxCust);
             this.Controls.Add(this.LogInUsernameCustLabel);
             this.Controls.Add(this.CustomerLoginLogo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginCustomer";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginCustomer_Load);
