@@ -32,7 +32,9 @@ namespace ProjectEDP
             }
             else
             {
+
                 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
+
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {

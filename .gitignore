@@ -1,44 +1,121 @@
-# General ignores for common OS files
-.DS_Store # macOS specific file for folder customization
-Thumbs.db # Windows thumbnail cache file
+# This .gitignore file is intended to be used with Visual Studio 2017 or higher.
+# It includes entries for common files and directories created by Visual Studio,
+# .NET (Core and Framework), NuGet, and other typical development tools.
 
+# ======================================================
+# General ignores for common OS and editor files
+# ======================================================
+.DS_Store                   # macOS specific file for folder customization
+Thumbs.db                   # Windows thumbnail cache file
+
+# ======================================================
 # Visual Studio and .NET related ignores
-.vs/                   # Visual Studio's hidden solution folder
-*.suo                  # Solution User Options file
-*.user                 # Per-user settings for a project
-*.bak                  # Backup files
-*.cache                # Various cache files
-*.pdb                  # Program Database files (debugging info)
-*.exe                  # Executable files
-*.dll                  # Dynamic Link Libraries
-*.obj                  # Object files (intermediate compilation)
-*.log                  # Log files
-*.tmp                  # Temporary files
-*.sbr                  # Source Browser files
-*.ncb                  # NMake build files
-*.opendb               # Open database files
-*.sdf                  # SQL Server Compact Edition database file
+# ======================================================
+# Visual Studio's hidden solution folder
+.vs/
 
-# Build output directories
-[Bb]in/                # Compiled binaries (e.g., Debug, Release)
-[Oo]bj/                # Intermediate build files
+# User-specific files
+*.suo                       # Solution User Options file
+*.user                      # Per-user settings for a project
+*.userprefs                 # User preferences file
 
-# NuGet packages and related files
-packages/              # NuGet packages directory (older style)
-*.nuget.props          # NuGet properties
-*.nuget.targets        # NuGet targets
-*.nupkg                # NuGet package files
-.nuget/                # NuGet folder (e.g., for config)
+# Temporary files, caches, and logs
+*.bak                       # Backup files (e.g., from Visual Studio saves)
+*.cache                     # Various cache files (e.g., build caches)
+*.log                       # Log files
+*.tmp                       # Temporary files
 
-# Rider specific files (if you use JetBrains Rider)
-.idea/                 # Rider/IntelliJ IDE configuration
-*.csproj.DotSettings   # Rider's project settings
-*.sln.DotSettings      # Rider's solution settings
+# Program Database files (debugging info)
+*.pdb
+
+# Executables, DLLs, and intermediate compilation artifacts
+*.exe
+*.dll
+*.obj                       # Object files (intermediate compilation)
+*.lib                       # Library files
+*.sbr                       # Source Browser files
+*.ncb                       # NMake build files
+*.opendb                    # Open database files (if any)
+*.sdf                       # SQL Server Compact Edition database file (older or specific setups)
 
 # Test results
 TestResults/
 
-# Other common ignores
-node_modules/          # If you have any Node.js dependencies
-npm-debug.log          # NPM debug log
-yarn-error.log         # Yarn error log
+# Visual Studio Code / VS Code related ignores (if used)
+.vscode/
+
+# Build output directories
+[Bb]in/                     # Compiled binaries (e.g., Debug, Release)
+[Oo]bj/                     # Intermediate build files
+
+# ======================================================
+# NuGet package management ignores
+# ======================================================
+# NuGet packages directory (older style, often found in solutions)
+packages/
+
+# NuGet specific files
+*.nuget.props
+*.nuget.targets
+*.nupkg                     # NuGet package files
+.nuget/                     # NuGet folder (e.g., for config, if present)
+
+# ======================================================
+# SQL Server files (for LocalDB / MDF files)
+# ======================================================
+# Important: If your .mdf and .ldf files are part of your *solution*,
+# and you want them to be deployed with the app (e.g., for LocalDB),
+# you might *not* want to ignore them if they are managed within the project.
+# However, if they are dynamic or temporary development databases, ignoring is good.
+# Based on your previous issues, it seems you want to manage them externally, so ignoring them is typical.
+*.mdf
+*.ldf
+
+# ======================================================
+# Other common development tool ignores
+# ======================================================
+# JetBrains Rider / IntelliJ IDE configuration (if you use Rider)
+.idea/
+*.csproj.DotSettings
+*.sln.DotSettings
+
+# Node.js related (if you have frontend parts or build scripts)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ======================================================
+# Visual Studio specific files (more detailed, from common templates)
+# ======================================================
+*.aps
+*.bsc
+*.fxcop
+*.fxcopxml
+*.hdm
+*.ilk
+*.pgc
+*.pgd
+*.rsp
+*.stackdump
+*.tlb
+*.tlh
+*.tli
+*.vshost.exe                 # Visual Studio Hosting Process executables
+*.vshost.exe.config
+*.vshost.exe.manifest
+*.vspscc
+*.vssscc
+
+# ReSharper and other JetBrains tools (if installed)
+*.ReSharper*
+*.DotSettings
+
+# ======================================================
+# Common build output directories (redundant with [Bb]in/ and [Oo]bj/ but good to explicitly list)
+# ======================================================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+out/

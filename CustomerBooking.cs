@@ -37,6 +37,7 @@ namespace ProjectEDP
 
         private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DITP2123\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
+
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;
 
@@ -120,12 +121,12 @@ namespace ProjectEDP
             }
             else
             {
+
                 MessageBox.Show($"No image found for: {car.Name}", "Missing Mapping", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TypeOfCar.Image = null;
+
             }
         }
-
-
 
 
 
@@ -267,6 +268,7 @@ namespace ProjectEDP
         private void TotalAmount_Click_1(object sender, EventArgs e) { }
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
+
 
         private void SubmitBtnRentBook_Click_1(object sender, EventArgs e)
         {
