@@ -42,3 +42,51 @@ TestResults/
 node_modules/          # If you have any Node.js dependencies
 npm-debug.log          # NPM debug log
 yarn-error.log         # Yarn error log
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.aps
+*.bsc
+*.fxcop
+*.fxcopxml
+*.hdm
+*.ilk
+*.lib
+*.nupkg
+*.obj
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.sdf
+*.stackdump
+*.tlb
+*.tlh
+*.tli
+*.tmp
+*.vshost.exe
+*.vshost.exe.config
+*.vshost.exe.manifest
+*.vspscc
+*.vssscc
+*.bak
+*.log
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+out/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# SQL Server files (you already addressed these, but good to have them here)
+*.mdf
+*.ldf
