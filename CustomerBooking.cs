@@ -24,7 +24,7 @@ namespace ProjectEDP
             this.SubmitBtnRentBook.Click += SubmitBtnRentBook_Click;
         }
 
-        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\luqma\OneDrive\Documents\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;
@@ -245,6 +245,11 @@ namespace ProjectEDP
         private void RentalDateLabel_Click(object sender, EventArgs e) { }
         private void CarRateLabel_Click(object sender, EventArgs e) { }
         private void TypeOfCar_Click(object sender, EventArgs e) { }
+
+        private void PaymentTypeGpBoxLabel_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class SqlDataReaderExtensions
