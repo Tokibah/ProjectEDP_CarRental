@@ -171,6 +171,7 @@
             this.SubmitB.TabIndex = 52;
             this.SubmitB.Text = "Submit";
             this.SubmitB.UseVisualStyleBackColor = true;
+            this.SubmitB.Click += new System.EventHandler(this.SubmitB_Click_1);
             // 
             // StatusCB
             // 

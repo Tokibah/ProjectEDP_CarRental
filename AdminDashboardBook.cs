@@ -7,7 +7,7 @@ namespace ProjectEDP
 {
     public partial class AdminDashboard : Form
     {
-        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private string selectedBookingId = string.Empty;
 
@@ -32,7 +32,7 @@ namespace ProjectEDP
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     string query = "SELECT Book_id, RentDate, ReturnDate, Cust_id, Car_id, Status FROM Booking";
@@ -172,7 +172,7 @@ namespace ProjectEDP
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
@@ -249,6 +249,11 @@ namespace ProjectEDP
             AdminDashboardCustomer customerForm = new AdminDashboardCustomer();
             customerForm.Show();
             this.Hide();
+        }
+
+        private void SubmitB_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -72,6 +72,9 @@ namespace ProjectEDP
 
         }
 
-    
+        private void LoginCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

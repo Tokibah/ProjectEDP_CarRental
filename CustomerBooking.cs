@@ -31,7 +31,7 @@ namespace ProjectEDP
             { "suv", Properties.Resources.hondasuv},
         };
 
-        private string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;
@@ -56,7 +56,7 @@ namespace ProjectEDP
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     string query = "SELECT Car_id, Name, PriceHour, Status FROM Car WHERE Status = 1 ORDER BY Name ASC";
@@ -171,7 +171,7 @@ namespace ProjectEDP
 
         private string GetCustomerId(string username)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT Cust_id FROM Customer WHERE Name = @name", conn);
@@ -278,7 +278,7 @@ namespace ProjectEDP
             try
             {
                 string bookingID = string.Empty;
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
@@ -315,6 +315,11 @@ namespace ProjectEDP
             {
                 MessageBox.Show("Error during booking: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void PaymentTypeGpBoxLabel_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 
