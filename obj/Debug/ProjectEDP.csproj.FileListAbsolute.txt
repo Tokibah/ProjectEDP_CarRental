@@ -5,6 +5,7 @@ C:\Users\User\source\repos\ProjectEDP_CarRental\bin\Debug\ProjectEDP.exe
 C:\Users\User\source\repos\ProjectEDP_CarRental\bin\Debug\ProjectEDP.pdb
 C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.AdminDashboard.resources
+C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.AdminDashboardCustomer.resources
 C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.AdminLogin.resources
 C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.CustomerBooking.resources
 C:\Users\User\source\repos\ProjectEDP_CarRental\obj\Debug\ProjectEDP.LoginCustomer.resources

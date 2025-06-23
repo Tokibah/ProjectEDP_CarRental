@@ -50,7 +50,7 @@
             this.UsernameTxtBoxCust.Name = "UsernameTxtBoxCust";
             this.UsernameTxtBoxCust.Size = new System.Drawing.Size(256, 32);
             this.UsernameTxtBoxCust.TabIndex = 13;
-            this.UsernameTxtBoxCust.TextChanged += new System.EventHandler(this.UsernameTxtBoxCust_TextChanged);
+
             // 
             // LogInUsernameCustLabel
             // 
@@ -71,6 +71,7 @@
             this.PasswordTxtBoxCust.Name = "PasswordTxtBoxCust";
             this.PasswordTxtBoxCust.Size = new System.Drawing.Size(256, 32);
             this.PasswordTxtBoxCust.TabIndex = 15;
+            this.PasswordTxtBoxCust.UseSystemPasswordChar = true;
             this.PasswordTxtBoxCust.TextChanged += new System.EventHandler(this.PasswordTxtBoxCust_TextChanged);
             // 
             // LogInPasswordCustLabel
@@ -111,7 +112,6 @@
             this.CustomerLoginLabel.Size = new System.Drawing.Size(236, 38);
             this.CustomerLoginLabel.TabIndex = 19;
             this.CustomerLoginLabel.Text = "Customer Login";
-            this.CustomerLoginLabel.Click += new System.EventHandler(this.CustomerLoginLabel_Click);
             // 
             // PasswordIconCust
             // 
@@ -132,7 +132,7 @@
             this.UsernameIconCusr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UsernameIconCusr.TabIndex = 16;
             this.UsernameIconCusr.TabStop = false;
-            this.UsernameIconCusr.Click += new System.EventHandler(this.UsernameIconCusr_Click);
+
             // 
             // CustomerLoginLogo
             // 
@@ -143,7 +143,7 @@
             this.CustomerLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CustomerLoginLogo.TabIndex = 0;
             this.CustomerLoginLogo.TabStop = false;
-            this.CustomerLoginLogo.Click += new System.EventHandler(this.CustomerLoginLogo_Click);
+
             // 
             // LoginCustomer
             // 
@@ -162,7 +162,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginCustomer";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.LoginCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordIconCust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsernameIconCusr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerLoginLogo)).EndInit();

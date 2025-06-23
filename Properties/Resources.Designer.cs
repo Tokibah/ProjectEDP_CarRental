@@ -83,9 +83,9 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hatchback {
+        internal static System.Drawing.Bitmap hatchback {
             get {
-                object obj = ResourceManager.GetObject("Hatchback", resourceCulture);
+                object obj = ResourceManager.GetObject("hatchback", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,16 @@ namespace ProjectEDP.Properties {
         internal static System.Drawing.Bitmap hondacivic {
             get {
                 object obj = ResourceManager.GetObject("hondacivic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hondasuv {
+            get {
+                object obj = ResourceManager.GetObject("hondasuv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,16 +166,6 @@ namespace ProjectEDP.Properties {
         internal static System.Drawing.Bitmap sharingLogoImg_100 {
             get {
                 object obj = ResourceManager.GetObject("sharingLogoImg_100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap suv {
-            get {
-                object obj = ResourceManager.GetObject("suv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

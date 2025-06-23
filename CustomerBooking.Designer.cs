@@ -86,10 +86,9 @@ namespace ProjectEDP
             this.CarRateLabel.Location = new System.Drawing.Point(817, 389);
             this.CarRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CarRateLabel.Name = "CarRateLabel";
-            this.CarRateLabel.Size = new System.Drawing.Size(198, 25);
+            this.CarRateLabel.Size = new System.Drawing.Size(188, 25);
             this.CarRateLabel.TabIndex = 37;
-            this.CarRateLabel.Text = "Car Rate Per Hour, RM";
-            this.CarRateLabel.Click += new System.EventHandler(this.CarRateLabel_Click);
+            this.CarRateLabel.Text = "Car Rate Per Day, RM";
             // 
             // CarTypeLabel
             // 
@@ -155,7 +154,6 @@ namespace ProjectEDP
             this.RentalDateLabel.Size = new System.Drawing.Size(112, 25);
             this.RentalDateLabel.TabIndex = 40;
             this.RentalDateLabel.Text = "Rental Date:";
-            this.RentalDateLabel.Click += new System.EventHandler(this.RentalDateLabel_Click);
             // 
             // ReturnDateLabel
             // 
@@ -339,7 +337,6 @@ namespace ProjectEDP
             this.CarRateStatic.Name = "CarRateStatic";
             this.CarRateStatic.Size = new System.Drawing.Size(132, 39);
             this.CarRateStatic.TabIndex = 47;
-            this.CarRateStatic.TextChanged += new System.EventHandler(this.CarRateStatic_TextChanged);
             // 
             // SubmitBtnRentBook
             // 
@@ -356,7 +353,7 @@ namespace ProjectEDP
             // 
             // TypeOfCar
             // 
-            this.TypeOfCar.Location = new System.Drawing.Point(19, 40);
+            this.TypeOfCar.Location = new System.Drawing.Point(25, 80);
             this.TypeOfCar.Name = "TypeOfCar";
             this.TypeOfCar.Size = new System.Drawing.Size(488, 306);
             this.TypeOfCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

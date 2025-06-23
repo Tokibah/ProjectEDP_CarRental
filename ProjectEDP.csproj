@@ -63,11 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="AdminDashboardBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <Compile Include="AdminDashboardBook.Designer.cs">
+      <DependentUpon>AdminDashboardBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboardCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardCustomer.Designer.cs">
+      <DependentUpon>AdminDashboardCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.cs">
       <SubType>Form</SubType>
@@ -92,7 +98,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrimeWheelDataSet.xsd</DependentUpon>
     </Compile>
-        <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -105,8 +111,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="AdminDashboardBook.resx">
+      <DependentUpon>AdminDashboardBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboardCustomer.resx">
+      <DependentUpon>AdminDashboardCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
