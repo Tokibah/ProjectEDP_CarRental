@@ -3,19 +3,24 @@
 1- Change database path to your own
 
 Go to each of these file:
+
 LoginCustomer.cs
+
 CustomerBooking.cs
+
 AdminLogin.cs
+
 AdminDashboardCustomer.cs
+
 AdminDashboardBook.cs
 
-Change that part of the string to your path:
+Change <your_path> of the string to your database path:
 
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
 
 to
 
-string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<your path>\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<your_path>\PrimeWheel.mdf;Integrated Security=True;Connect Timeout=30";
 
 ![Screenshot 2025-06-23 210328](https://github.com/user-attachments/assets/32d37c22-65ab-4218-8815-b64ddf001ace)
 ![Screenshot 2025-06-23 210336](https://github.com/user-attachments/assets/9b3691f3-c1ea-4659-a04c-bb8470675c66)
