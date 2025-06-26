@@ -11,7 +11,7 @@ namespace ProjectEDP
     {
         // Connection string to your SQL Server LocalDB database.
         // NOTE: Ensure the path to your .mdf file is correct on the deployment machine.
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ashwin\Desktop\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
         private string selectedCustId = string.Empty; // Stores the ID of the currently selected customer.
         private bool isDeleteProcessing = false; // Guard flag to prevent multiple deletion attempts.
 

@@ -7,7 +7,7 @@ namespace ProjectEDP
 {
     public partial class AdminDashboard : Form
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ashwin\Desktop\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private string selectedBookingId = string.Empty;
 

@@ -31,7 +31,7 @@ namespace ProjectEDP
             { "suv", Properties.Resources.hondasuv},
         };
 
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ashwin\Desktop\ProjectEDP_CarRental\PrimeWheel.mdf;Integrated Security=True";
 
         private List<CarData> availableCars = new List<CarData>();
         private int currentCarIndex = 0;

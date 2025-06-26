@@ -40,6 +40,9 @@
             this.custidL = new System.Windows.Forms.Label();
             this.DeleteB = new System.Windows.Forms.Button();
             this.toBookingB = new System.Windows.Forms.Button();
+            this.DashboardLabel = new System.Windows.Forms.Label();
+            this.bookingIDLabel = new System.Windows.Forms.Label();
+            this.BookingManagementLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.primeWheelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
@@ -79,11 +82,12 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.customerDataGridView.DataSource = this.customerBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(34, 31);
+            this.customerDataGridView.Location = new System.Drawing.Point(28, 77);
+            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.RowHeadersWidth = 51;
             this.customerDataGridView.RowTemplate.Height = 24;
-            this.customerDataGridView.Size = new System.Drawing.Size(644, 331);
+            this.customerDataGridView.Size = new System.Drawing.Size(647, 363);
             this.customerDataGridView.TabIndex = 1;
             this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             // 
@@ -111,10 +115,12 @@
             // custidL
             // 
             this.custidL.AutoSize = true;
-            this.custidL.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custidL.Location = new System.Drawing.Point(694, 31);
+            this.custidL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custidL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.custidL.Location = new System.Drawing.Point(871, 82);
+            this.custidL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.custidL.Name = "custidL";
-            this.custidL.Size = new System.Drawing.Size(208, 39);
+            this.custidL.Size = new System.Drawing.Size(130, 25);
             this.custidL.TabIndex = 56;
             this.custidL.Text = "Customer ID";
             this.custidL.Click += new System.EventHandler(this.custidL_Click);
@@ -122,10 +128,10 @@
             // DeleteB
             // 
             this.DeleteB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteB.Location = new System.Drawing.Point(701, 101);
-            this.DeleteB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteB.Location = new System.Drawing.Point(701, 163);
+            this.DeleteB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteB.Name = "DeleteB";
-            this.DeleteB.Size = new System.Drawing.Size(97, 39);
+            this.DeleteB.Size = new System.Drawing.Size(73, 32);
             this.DeleteB.TabIndex = 55;
             this.DeleteB.Text = "Delete";
             this.DeleteB.UseVisualStyleBackColor = true;
@@ -133,24 +139,67 @@
             // 
             // toBookingB
             // 
-            this.toBookingB.Location = new System.Drawing.Point(881, 332);
+            this.toBookingB.Location = new System.Drawing.Point(1093, 415);
+            this.toBookingB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toBookingB.Name = "toBookingB";
-            this.toBookingB.Size = new System.Drawing.Size(98, 30);
+            this.toBookingB.Size = new System.Drawing.Size(74, 24);
             this.toBookingB.TabIndex = 57;
             this.toBookingB.Text = "Booking";
             this.toBookingB.UseVisualStyleBackColor = true;
             this.toBookingB.Click += new System.EventHandler(this.toBookingB_Click);
             // 
+            // DashboardLabel
+            // 
+            this.DashboardLabel.AutoSize = true;
+            this.DashboardLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.DashboardLabel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DashboardLabel.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashboardLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DashboardLabel.Location = new System.Drawing.Point(23, 9);
+            this.DashboardLabel.Name = "DashboardLabel";
+            this.DashboardLabel.Size = new System.Drawing.Size(208, 29);
+            this.DashboardLabel.TabIndex = 58;
+            this.DashboardLabel.Text = "Admin Dashboard";
+            // 
+            // bookingIDLabel
+            // 
+            this.bookingIDLabel.AutoSize = true;
+            this.bookingIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bookingIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingIDLabel.Location = new System.Drawing.Point(695, 77);
+            this.bookingIDLabel.Name = "bookingIDLabel";
+            this.bookingIDLabel.Size = new System.Drawing.Size(182, 31);
+            this.bookingIDLabel.TabIndex = 60;
+            this.bookingIDLabel.Text = "Customer ID :";
+            // 
+            // BookingManagementLabel
+            // 
+            this.BookingManagementLabel.AutoSize = true;
+            this.BookingManagementLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.BookingManagementLabel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.BookingManagementLabel.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookingManagementLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.BookingManagementLabel.Location = new System.Drawing.Point(15, 38);
+            this.BookingManagementLabel.Name = "BookingManagementLabel";
+            this.BookingManagementLabel.Size = new System.Drawing.Size(238, 27);
+            this.BookingManagementLabel.TabIndex = 61;
+            this.BookingManagementLabel.Text = "(Customer Management)";
+            // 
             // AdminDashboardCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 382);
+            this.ClientSize = new System.Drawing.Size(1178, 450);
+            this.Controls.Add(this.BookingManagementLabel);
+            this.Controls.Add(this.bookingIDLabel);
+            this.Controls.Add(this.DashboardLabel);
             this.Controls.Add(this.toBookingB);
             this.Controls.Add(this.custidL);
             this.Controls.Add(this.DeleteB);
             this.Controls.Add(this.customerDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminDashboardCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboardCustomer";
             this.Load += new System.EventHandler(this.AdminDashboardCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.primeWheelDataSet)).EndInit();
@@ -174,5 +223,8 @@
         private System.Windows.Forms.Label custidL;
         private System.Windows.Forms.Button DeleteB;
         private System.Windows.Forms.Button toBookingB;
+        private System.Windows.Forms.Label DashboardLabel;
+        private System.Windows.Forms.Label bookingIDLabel;
+        private System.Windows.Forms.Label BookingManagementLabel;
     }
 }
